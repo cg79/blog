@@ -3,8 +3,8 @@
 A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://github.com/mdx-js/mdx) to render React components in Markdown. Used by:
 
 * [Egghead.io](https://github.com/eggheadio/gatsby-starter-egghead-blog)
-* [Kent C. Dodds](https://github.com/kentcdodds/kentcdodds.com)
-* [Robin Wieruch](https://www.robinwieruch.de/)
+* [Git](https://github.com/cg79/blog)
+* [Claudiu Gombos](https://www.fullsd.com/)
 
 ## Features
 
@@ -17,16 +17,9 @@ A starter project in [Gatsby.js](https://www.gatsbyjs.org/) with [MDX](https://g
 
 ## Setup
 
-* `git clone git@github.com:rwieruch/gatsby-mdx-blog-starter-project.git`
-* `cd gatsby-mdx-blog-starter-project`
+* `git clone https://github.com/cg79/blog`
+* `cd blog`
 * `npm install`
 * `gatsby develop`
 * visit http://localhost:8000
 
-## Setup via Gatsby CLI
-
-* `gatsby new gatsby-mdx-blog-starter-project git@github.com:rwieruch/gatsby-mdx-blog-starter-project.git`
-* `cd gatsby-mdx-blog-starter-project`
-* `npm install`
-* `gatsby develop`
-* visit http://localhost:8000
