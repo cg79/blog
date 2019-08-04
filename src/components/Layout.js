@@ -40,7 +40,8 @@ const GlobalStyle = createGlobalStyle`
 const NAVIGATION = [
   { to: '/', label: 'About' },
   { to: '/blog', label: 'Blog' },
-  { to: '/algo', label: 'Algo' },
+  { to: '/algo', label: 'Algorithms' },
+  { to: '/mongo', label: 'MongoDB' },
   { to: 'https://roadtoreact.com', label: 'Courses' },
 ];
 
@@ -80,6 +81,7 @@ export default ({ site, frontmatter = {}, children }) => {
         }}
       >
         <Fragment>
+          
           <div className="row">
             <div className="col-md-3">
               <ul>
