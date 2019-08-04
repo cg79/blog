@@ -1,9 +1,9 @@
 ---
-slug: "/algo"
+slug: "/mongo/find"
 date: "2017-07-13T03:49:16.408Z"
 title: "Arrays"
 description: "MDX Example Description ..."
-categories: ["react","algo/arrays/sum","algo/regex" ]
+categories: ["mongo/entities" ]
 keywords: ["react"]
 baselink: "algo"
 banner: "./images/banner.jpg"

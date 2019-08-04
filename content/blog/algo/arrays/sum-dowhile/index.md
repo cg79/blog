@@ -1,5 +1,5 @@
 ---
-slug: "/algo/arrays/sum-reduce"
+slug: "/algo/arrays/sum-dowhile"
 date: "2017-07-13T03:49:16.408Z"
 title: "Sum of array"
 description: "MDX Example Description ..."
@@ -10,16 +10,23 @@ banner: "./images/banner.jpg"
 
 
 ```javascript
-function sumArrayReduce(arr) {
-    return arr.reduce((acumulator, el)=> acumulator = acumulator+el,0);
-};
+sumDoWhile = (arr) => {
+	if(!arr.length) {
+		return 0;
+	}
+	let sum = 0;
+	let index = 0;
+	do {
+		sum += arr[index]; 
+		index ++;
+	} while(index < arr.length)
+	return sum;
+}
 ```
 
 For testing, you can use this function as:
 
 ```javascript
-let sum = sumArrayReduce([2,3,8]);
+let sum = sumDoWhile([2,3,8]);
 console.log(sum);
 ```
-
-

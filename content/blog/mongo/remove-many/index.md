@@ -1,5 +1,5 @@
 ---
-slug: "/algo"
+slug: "/mongo/remove-many"
 date: "2017-07-13T03:49:16.408Z"
 title: "Arrays"
 description: "MDX Example Description ..."
