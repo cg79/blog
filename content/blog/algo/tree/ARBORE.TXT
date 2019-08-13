@@ -1,0 +1,48 @@
+
+var source = [{id:1, name: 'unu', parentId:0},
+{id:2, name: 'doi', parentId:1} ,
+{id:3, name: 'trei', parentId:1} ,
+{id:4, name: 'patru', parentId:3},
+{id:4, name: 'x', parentId:0}];
+
+
+function createDir({id, name, parentId}) {
+	var directory = {
+		id,
+		name,
+		parentId,
+		directories: []
+	};
+	return directory;
+}
+
+function getNodesForParent(arr, parentId) {
+	return arr.filter(el => el.parentId == parentId);
+}
+
+function createSubDirectories(arr, dir) {
+debugger;
+	var nodes = getNodesForParent(arr, dir.id);
+	for(var i=0;i< nodes.length;i++) {
+		var node = nodes[i];
+		var directory = createDir(node);
+		dir.directories.push(directory);
+		createSubDirectories(arr, directory);
+	}
+	
+}
+
+function createStructure(arr) {
+	var root = createDir({
+		id:0,
+		name: 'root', 
+		parentId:0
+	});
+	createSubDirectories(arr, root);
+	
+	return root;
+}
+
+
+
+

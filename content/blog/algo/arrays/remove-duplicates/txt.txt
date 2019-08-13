@@ -1,0 +1,3 @@
+function uniquearray(array) { 
+       let unique_array= Array.from(set(array)) 
+       return unique_array;}

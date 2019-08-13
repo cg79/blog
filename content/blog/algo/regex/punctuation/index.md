@@ -10,13 +10,27 @@ banner: "./images/banner.jpg"
 
 
 ```javascript
-function sumArrayV1(arr) {
-    let s = 0;
-    for (let i=0;i<arr.length;i++) {
-        s+= arr[i];
-    }
-    return s;
-};
+function punctuation (input) {
+ function dot(s) {
+ var re = /(\.|\!|\?)(\s{0,})(\w)/g;
+ s = s.replace(re, function(x, $1, $2, $3) {
+ return $1 + " " + $3.toUpperCase();
+ });
+ return s;
+ }
+ function comma(s) {
+ var re = /(\,|\:|\;)(\s{0,})(\w)/g;
+ s = s.replace(re, function(x, $1, $2, $3) {
+ return $1 +$2 + $3;
+ });
+ return s;
+ }
+ 
+ var result = dot(input);
+ result = comma(result);
+ console.log(result);
+ return result;
+ }
 ```
 
 For testing, you can use this function as:

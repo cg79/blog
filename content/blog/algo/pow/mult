@@ -1,0 +1,53 @@
+
+
+function pow(baza,putere,moduloN)
+{
+//debugger;
+	if(putere === 1)
+	return baza % moduloN;
+
+	i =1;
+	var rez =baza;
+	while(i*2<putere)
+	{
+		rez = (rez * rez) % moduloN; 
+		i = i*2;
+	}
+	return rez * pow(baza,putere-i,moduloN) % moduloN;
+}
+
+function calcP(a,b) {
+	var n = a*b;
+
+
+var j = (n+1)/2;
+
+var m = ((j*j) % n)-1;
+
+var dif = n-m;
+	console.log('dif ', dif);
+
+	var powResult = pow(3, (n-3), n);
+	console.log('powResult ' ,powResult);
+
+powResult = pow(3, (n-4), n);
+	console.log('powResult ' ,powResult);
+
+
+var i = 0;
+
+var p = n*i + dif;
+function isNOriNPlus1(x) {
+	var r = Math.sqrt(x) >> 0;
+	return r * (r+1) === x;
+}
+console.log(p);
+var found = isNOriNPlus1(p);
+
+while(!found) {
+i++;
+p = n*i + dif;
+console.log(p);
+found = isNOriNPlus1(p);
+}
+}

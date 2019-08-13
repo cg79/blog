@@ -1,0 +1,7 @@
+The design pattern is a general reusable solution to a commonly occurring problem in software design. Some of the design patterns are:
+
+Creational design pattern: These patterns dealt with the mechanism of object creation which optimize object creation with the basic approach.
+Structural design pattern: these patterns deal with different classes and objects to provide new functionality.
+Behavioral Patterns: These patterns are to improve communication between objects and to recognize patterns.
+Concurrency design patterns: These patterns handle with multi-thread programming paradigms.
+Architectural design patterns: These patterns used to deal with architectural designs.

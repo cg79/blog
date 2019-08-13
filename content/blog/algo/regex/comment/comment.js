@@ -1,0 +1,1 @@
+var str = "//*asdf*/".match(/^\/\/.*/g);

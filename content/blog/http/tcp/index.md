@@ -1,5 +1,5 @@
 ---
-slug: "/algo/regex"
+slug: "/algo"
 date: "2017-07-13T03:49:16.408Z"
 title: "Arrays"
 description: "MDX Example Description ..."
@@ -16,8 +16,6 @@ Showcasing how MDX for Gatsby.js works ... The Counter component is imported exp
 ## A React component in Markdown (imported component):
 
 <Counter initialCounter={3} />
-
-https://regex101.com/
 
 ## Code Snippet
 
