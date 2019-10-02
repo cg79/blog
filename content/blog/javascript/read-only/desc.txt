@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/7757337/defining-read-only-properties-in-javascript

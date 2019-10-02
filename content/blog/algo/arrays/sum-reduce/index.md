@@ -13,6 +13,10 @@ banner: "./images/banner.jpg"
 function sumArrayReduce(arr) {
     return arr.reduce((acumulator, el)=> acumulator = acumulator+el,0);
 };
+
+function sum(...nums: number[]): number {
+    return nums.reduce((a, b) => a + b, 0);
+}
 ```
 
 For testing, you can use this function as:
