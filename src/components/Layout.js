@@ -8,8 +8,7 @@ import 'prismjs/themes/prism-okaidia.css';
 
 import 'jquery/dist/jquery.min.js';
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
-
+// import 'bootstrap/dist/js/bootstrap.min.js';
 
 import Link from './Link';
 import { MDXLayoutComponents, MDXGlobalComponents } from './mdx';
