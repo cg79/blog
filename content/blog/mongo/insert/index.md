@@ -12,8 +12,14 @@ banner: "./images/banner.jpg"
 ```javascript
 {
   data: {},
-  fields: [''],
-  collectionName: '',
-  nested: [nested]
+  
+  proxy: {
+        module: "generic",
+        method: "insert",
+        info: {
+            collection: "testcollection",
+            fields: ['']
+        }
+    }
 }
 ```
