@@ -184,7 +184,24 @@ export default ({ site, frontmatter = {}, children }) => {
                   </li>
                   
                   <li>
+                      <a className="dropdown-item" href="/javascript">Javascript</a>
+                  </li>
+                  <li>
                       <a className="dropdown-item" href="/dotnet">C#</a>
+                  </li>
+
+                  <li>
+                      <a className="dropdown-item" href="/kotlin">Kotlin</a>
+                  </li>
+                  <li>
+                      <a className="dropdown-item" href="/golang">Golang</a>
+                  </li>
+                  <li>
+                      <a className="dropdown-item" href="/testing">Testing</a>
+                  </li>
+
+                  <li>
+                      <a className="dropdown-item" href="/python">Python</a>
                   </li>
 
                   <li>
