@@ -4,7 +4,7 @@ date: "2017-07-13T03:49:16.408Z"
 title: "Sum of array"
 description: "MDX Example Description ..."
 categories: ["algo/arrays/sum-map"]
-keywords: ["react"]
+keywords: []
 banner: "./images/banner.jpg"
 ---
 

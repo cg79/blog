@@ -4,7 +4,7 @@ date: "2017-07-13T03:49:16.408Z"
 title: "Sum of array"
 description: "MDX Example Description ..."
 categories: ["algo/arrays/sum-recursion","algo/arrays/sum-for-each", "algo/arrays/sum-map","algo/arrays/sum-reduce", "algo/arrays/sum-while", "algo/arrays/sum-dowhile" ]
-keywords: ["react"]
+keywords: []
 banner: "./images/banner.jpg"
 ---
 
