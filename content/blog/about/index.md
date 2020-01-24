@@ -9,4 +9,7 @@ baselink: ""
 banner: "./images/banner.jpg"
 ---
 
-That's it.
+Claudiu Gombos is a passionate developer, trainer,  having a big experience with most of the technologies added to this blog.
+
+twitter: @ClaudiuGombos
+git: claudiugombos, cg79 and 3 other private repositories

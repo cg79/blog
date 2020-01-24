@@ -180,6 +180,14 @@ export default ({ site, frontmatter = {}, children }) => {
                   </li>
 
                   <li>
+                      <a className="dropdown-item" href="/angular">Angular</a>
+                  </li>
+
+                  <li>
+                      <a className="dropdown-item" href="/git">Git</a>
+                  </li>
+
+                  <li>
                       <a className="dropdown-item" href="/reactnative">React native</a>
                   </li>
                   
@@ -188,6 +196,9 @@ export default ({ site, frontmatter = {}, children }) => {
                   </li>
                   <li>
                       <a className="dropdown-item" href="/dotnet">C#</a>
+                  </li>
+                  <li>
+                      <a className="dropdown-item" href="/php">Php</a>
                   </li>
 
                   <li>
