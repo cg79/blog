@@ -64,6 +64,17 @@ const GlobalStyle = createGlobalStyle`
     display: none;
   }
 
+  @media all and (max-width: 1200px) {  
+    
+    .navcontainer {  
+      flex-wrap: wrap;  
+      border: 5px solid yellow;
+    }  
+    .navcontainer > li {  
+      flex-basis: 33%;  
+    }
+  }
+
   @media all and (max-width: 800px) {  
     
     .navcontainer {  
@@ -71,19 +82,17 @@ const GlobalStyle = createGlobalStyle`
       border: 5px solid green;
     }  
     .navcontainer > li {  
-      flex-basis: 50%;  
+      flex-basis: 33%;  
     }
   }
 
   @media all and (max-width: 600px) {  
 
-    .navtoggle {
-    }
     .navcontainer {  
       border: 5px solid blue;
     }  
     .navcontainer > li {  
-      flex-basis: 100%;  
+      flex-basis: 50%;  
     }  
     .search {  
       order: 1;  
@@ -92,9 +101,29 @@ const GlobalStyle = createGlobalStyle`
     .navtoggle {
       align-self: flex-end;
       display: initial;
-      position: absolute;
       cursor: pointer;
+      margin-bottom: 15px;
     }
+
+    .categories{
+      display: flex;
+      justify-content: space-evenly;
+      list-style-type: none;    
+    }
+
+    .categories > li {  
+      flex-basis: 50%;  
+    }  
+  }
+
+  ul.navcontainer{
+    list-style-type: none;
+  }
+
+  .categories{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;    
   }
 
 `;
@@ -172,11 +201,15 @@ export default ({ site, frontmatter = {}, children }) => {
                   </li>
 
                   <li>
-                      <a className="dropdown-item" href="/mongo">Node & Mongo</a>
+                      <a className="dropdown-item" href="/node">Node</a>
                   </li>
 
                   <li>
-                      <a className="dropdown-item" href="/css">Html & css</a>
+                      <a className="dropdown-item" href="/mongo">Mongo</a>
+                  </li>
+
+                  <li>
+                      <a className="dropdown-item" href="/css">Css</a>
                   </li>
 
                   <li>
@@ -229,6 +262,10 @@ export default ({ site, frontmatter = {}, children }) => {
 
                   <li>
                       <a className="dropdown-item" href="/devops">DevOps</a>
+                  </li>
+
+                  <li>
+                      <a className="dropdown-item" href="/practices">Practices</a>
                   </li>
 
                   <li>

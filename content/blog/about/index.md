@@ -9,7 +9,7 @@ baselink: ""
 banner: "./images/banner.jpg"
 ---
 
-Claudiu Gombos is a passionate developer, trainer,  having a big experience with most of the technologies added to this blog.
+Claudiu Gombos is a passionate developer, trainer, having a big experience with all of the technologies added to this blog, excepting Kotlin and Golang which are added as a learning purpose.
 
 twitter: @ClaudiuGombos
 git: claudiugombos, cg79 and 3 other private repositories

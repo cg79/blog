@@ -8,8 +8,8 @@ import Link from '../components/Link';
 
 const CategoryList = ({ list = [] }) => (
   <Fragment>
-    Categories 1:
-    <ul>
+   
+    <ul className="categories">
       {list.map(category => (
         <li key={category}>
           <Link to={`/${category}`}>{category.split("/").pop()}</Link>
@@ -30,7 +30,6 @@ export default function Post({
       <h2>{mdx.frontmatter.date}</h2>
       <h2>{mdx.frontmatter.baselink}</h2>
       
-
       {mdx.frontmatter.banner && (
         <Img
           sizes={mdx.frontmatter.banner.childImageSharp.sizes}
@@ -46,7 +45,6 @@ export default function Post({
 
       <div>
         
-
         {prev && (
           <span>
             Previous{' '}

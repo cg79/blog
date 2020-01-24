@@ -1,5 +1,5 @@
 ---
-slug: "/algo/arrays/sum"
+slug: "/practices"
 date: "2017-07-13T03:49:16.408Z"
 title: "Sum of array"
 description: "MDX Example Description ..."

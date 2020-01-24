@@ -30,3 +30,5 @@ https://freefrontend.com/css-headers-footers/
 https://codepen.io/tonyjessup/pen/vKWYxQ
 https://www.flexboxpatterns.com/stream
 https://bashooka.com/coding/15-best-flexbox-grid-frameworks/
+https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/
+https://loading.io/flexbox/
