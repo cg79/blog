@@ -59,8 +59,8 @@ export default Counter;
 
 ![Some Cover Image](./images/banner.jpg)
 
-## YouTube (global component)
 
-<YouTube videoId="rI8tNMsozo0" />
+
+
 
 That's it.
