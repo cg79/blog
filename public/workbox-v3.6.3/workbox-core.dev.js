@@ -44,7 +44,7 @@ this.workbox.core = (function () {
   } catch (e) {} // eslint-disable-line
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -82,7 +82,7 @@ this.workbox.core = (function () {
   };
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -160,7 +160,7 @@ this.workbox.core = (function () {
   Object.keys(levelToColor).forEach(keyName => setupLogs(keyName, levelToColor[keyName]));
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -343,7 +343,7 @@ this.workbox.core = (function () {
   };
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -370,7 +370,7 @@ this.workbox.core = (function () {
   const exportedValue = generatorFunction;
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -414,7 +414,7 @@ this.workbox.core = (function () {
   }
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -570,7 +570,7 @@ this.workbox.core = (function () {
   }
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -948,7 +948,7 @@ this.workbox.core = (function () {
   DBWrapper.prototype.OPEN_TIMEOUT = 2000;
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -995,7 +995,7 @@ this.workbox.core = (function () {
   };
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -1019,7 +1019,7 @@ this.workbox.core = (function () {
   };
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -1041,7 +1041,7 @@ this.workbox.core = (function () {
   };
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -1065,7 +1065,7 @@ this.workbox.core = (function () {
   };
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -1296,7 +1296,7 @@ this.workbox.core = (function () {
   };
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -1430,7 +1430,7 @@ this.workbox.core = (function () {
   };
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -1457,7 +1457,7 @@ this.workbox.core = (function () {
   });
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -1536,7 +1536,7 @@ this.workbox.core = (function () {
   const finalCheckSWFileCacheHeaders = checkSWFileCacheHeaders;
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -1708,7 +1708,7 @@ this.workbox.core = (function () {
   var defaultExport$1 = new WorkboxCore();
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

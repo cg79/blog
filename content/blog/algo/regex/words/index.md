@@ -1,6 +1,6 @@
 ---
 slug: "/algo/regex/words"
-date: "2017-07-13T03:49:16.408Z"
+date: "2020-01-26T03:49:16.408Z"
 title: "Sum of array"
 description: "MDX Example Description ..."
 categories: ["algo/regex/words"]

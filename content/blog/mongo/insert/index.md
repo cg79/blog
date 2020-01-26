@@ -1,6 +1,6 @@
 ---
 slug: "/mongo/insert"
-date: "2017-07-13T03:49:16.408Z"
+date: "2020-01-26T03:49:16.408Z"
 title: "Arrays"
 description: "MDX Example Description ..."
 categories: ["mongo/insert", "mongo/insert-many","mongo/find", "mongo/find-many", "mongo/update", "mongo/update-many", "mongo/remove", "mongo/remove-many"  ]

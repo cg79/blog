@@ -2,7 +2,11 @@ html,
 body {
   height: 100%;
 }
-
+.ccc
+{
+  background-color: #44e0e0;
+  flex-basis: 100%;
+}
 .containerc {
   height: 100%;
   min-height: 100%;

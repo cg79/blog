@@ -33,7 +33,7 @@ this.workbox.navigationPreload = (function (exports,logger_mjs) {
   }
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -70,7 +70,7 @@ this.workbox.navigationPreload = (function (exports,logger_mjs) {
   }
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -89,7 +89,7 @@ this.workbox.navigationPreload = (function (exports,logger_mjs) {
    * If the browser supports Navigation Preload, then this will enable it.
    *
    * @param {string} [headerValue] Optionally, allows developers to
-   * [override](https://developers.google.com/web/updates/2017/02/navigation-preload#changing_the_header)
+   * [override](https://developers.google.com/web/updates/2020/02/navigation-preload#changing_the_header)
    * the value of the `Service-Worker-Navigation-Preload` header which will be
    * sent to the server when making the navigation request.
    *
@@ -117,7 +117,7 @@ this.workbox.navigationPreload = (function (exports,logger_mjs) {
   }
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -133,7 +133,7 @@ this.workbox.navigationPreload = (function (exports,logger_mjs) {
   */
 
   /*
-    Copyright 2017 Google Inc.
+    Copyright 2020 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
