@@ -7,7 +7,7 @@ this.workbox.expiration = (function (exports,DBWrapper_mjs,WorkboxError_mjs,asse
   } catch (e) {} // eslint-disable-line
 
   /*
-    Copyright 2020 Google Inc.
+    Copyright 2017 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -145,7 +145,7 @@ this.workbox.expiration = (function (exports,DBWrapper_mjs,WorkboxError_mjs,asse
   }
 
   /*
-    Copyright 2020 Google Inc.
+    Copyright 2017 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -699,7 +699,7 @@ this.workbox.expiration = (function (exports,DBWrapper_mjs,WorkboxError_mjs,asse
   }
 
   /*
-    Copyright 2020 Google Inc.
+    Copyright 2017 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -715,7 +715,7 @@ this.workbox.expiration = (function (exports,DBWrapper_mjs,WorkboxError_mjs,asse
   */
 
   /*
-    Copyright 2020 Google Inc.
+    Copyright 2017 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

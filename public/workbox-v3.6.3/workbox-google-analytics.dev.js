@@ -7,7 +7,7 @@ this.workbox.googleAnalytics = (function (exports,Plugin_mjs,cacheNames_mjs,Rout
      } catch (e) {} // eslint-disable-line
 
      /*
-      Copyright 2020 Google Inc. All Rights Reserved.
+      Copyright 2017 Google Inc. All Rights Reserved.
       Licensed under the Apache License, Version 2.0 (the "License");
       you may not use this file except in compliance with the License.
       You may obtain a copy of the License at
@@ -35,7 +35,7 @@ this.workbox.googleAnalytics = (function (exports,Plugin_mjs,cacheNames_mjs,Rout
      const COLLECT_PATHS_REGEX = /^\/(\w+\/)?collect/;
 
      /*
-      Copyright 2020 Google Inc. All Rights Reserved.
+      Copyright 2017 Google Inc. All Rights Reserved.
       Licensed under the Apache License, Version 2.0 (the "License");
       you may not use this file except in compliance with the License.
       You may obtain a copy of the License at
@@ -232,7 +232,7 @@ this.workbox.googleAnalytics = (function (exports,Plugin_mjs,cacheNames_mjs,Rout
      };
 
      /*
-      Copyright 2020 Google Inc. All Rights Reserved.
+      Copyright 2017 Google Inc. All Rights Reserved.
       Licensed under the Apache License, Version 2.0 (the "License");
       you may not use this file except in compliance with the License.
       You may obtain a copy of the License at

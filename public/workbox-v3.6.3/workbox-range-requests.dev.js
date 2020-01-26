@@ -7,7 +7,7 @@ this.workbox.rangeRequests = (function (exports,WorkboxError_mjs,assert_mjs,logg
   } catch (e) {} // eslint-disable-line
 
   /*
-    Copyright 2020 Google Inc.
+    Copyright 2017 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -73,7 +73,7 @@ this.workbox.rangeRequests = (function (exports,WorkboxError_mjs,assert_mjs,logg
   }
 
   /*
-    Copyright 2020 Google Inc.
+    Copyright 2017 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -258,7 +258,7 @@ this.workbox.rangeRequests = (function (exports,WorkboxError_mjs,assert_mjs,logg
   }
 
   /*
-    Copyright 2020 Google Inc.
+    Copyright 2017 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -274,7 +274,7 @@ this.workbox.rangeRequests = (function (exports,WorkboxError_mjs,assert_mjs,logg
   */
 
   /*
-    Copyright 2020 Google Inc.
+    Copyright 2017 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

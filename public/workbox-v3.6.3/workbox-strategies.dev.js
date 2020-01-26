@@ -1063,7 +1063,7 @@ this.workbox.strategies = (function (logger_mjs,assert_mjs,cacheNames_mjs,cacheW
   }
 
   /*
-    Copyright 2020 Google Inc.
+    Copyright 2017 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -1148,7 +1148,7 @@ this.workbox.strategies = (function (logger_mjs,assert_mjs,cacheNames_mjs,cacheW
   });
 
   /*
-    Copyright 2020 Google Inc.
+    Copyright 2017 Google Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
