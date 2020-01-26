@@ -1,28 +1,17 @@
 import React from 'react';
 
-const TextComponent = ({ initialCounter }) => {
-  const [counter, setCounter] = React.useState(initialCounter);
+import './textcomp.css';
 
-  const onIncrement = () => {
-    setCounter(c => c + 3);
-  };
-
-  const onDecrement = () => {
-    setCounter(c => c - 1);
-  };
+const TextComponent = ({ title, lines }) => {
 
   return (
-    <div>
-      {counter}
-
-      <div>
-        <button onClick={onIncrement} type="button">
-          Increment
-        </button>
-        <button onClick={onDecrement} type="button">
-          Decrement
-        </button>
-      </div>
+    
+    <div className='flexc'>
+      <h3 className='title'>{title}</h3>
+      {lines.map((line, index) => (
+        <div className= {`flexi ${line.css}`}>{line.text}</div>
+      ))}
+      
     </div>
   );
 };

@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
-    siteUrl: 'https://www.fullsd.com/',
+    siteUrl: 'https://claudiugombos.com/',
     author: 'Claudiu Gombos',
     title: 'Claudiu Gombos',
     description: 'Claudiu Gombos',
