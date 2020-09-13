@@ -1,0 +1,274 @@
+
+Aceste exercitii se pot rezolva si mai incolo daca acum e mai greut. se pot face si acum. de aia o sa dau niste hinturi.
+
+TAKE A LOOOK: https://scotch.io/tutorials/coding-exercise-build-javascript-array-methods-from-scratch
+
+1. WAF which prints to the console element by element from array
+
+      const array1 = ['Vasile','Grigore','Mircea'];
+
+ 1.1. use forEach
+
+      array1.forEach(function (name) {
+               console.log(name);
+      });   
+                       sau
+
+      array1.forEach(name => console.log(name));      
+
+ 1.2. use map
+
+      array1.map(function (item) {
+               console.log(item);
+      });
+
+      array1.map(item => console.log('Huning' + ' ' + item));
+
+ 1.3. use reduce
+
+      const names = array1.reduce(function (total, name) {
+               return total + ', ' + name;
+      });
+      console.log(names);
+
+2. WAF which receive an array of numbers and returns the sum of elements from array
+        
+        var array2 = [1,2,3,4,5,6];
+
+	2.1 use reduce
+
+        const sumOfNumbersWithReduce = array2.reduce(function (accumulator, currentValue) { 
+                       return accumulator + currentValue;
+        }, 0);
+        console.log(sumOfNumbersWithReduce);
+
+	2.2 use forEach
+		hint: you need another valiable named 'sum' for example which is equal 0; for each element from array, increase the sum value and as the last step, return the sum value
+        
+        var sum = 0;
+        const sumOfNumberWithForEach = array2.forEach(function(item) {
+                    sum += item;
+        });
+        console.log(sum);
+
+	2.3 use map
+
+        var sum2 = 0;
+        const sumOfNumbersWithMap = array2.map(function (numbers) {
+                     sum2 += numbers;
+        });
+        console.log(sum2);
+
+3. WAF WR the sum of even (%2 ===0) from an array
+
+        var array3 = [11, 12, 13, 14, 15, 16];
+
+        const evenNumbers = array3.filter(function(item) {
+               if (item %2 === 0) {
+        return true;
+             }
+        });
+
+	3.1. use filter and after that use function declared at 2.1
+           var sumOfEven = evenNumbers.reduce(function(total, item) {
+                     return total + item;
+           }, 0);
+           console.log(sumOfEven);   
+
+	3.2. use filter and after that use function declared at 2.2
+           var sumForEach = 0;
+
+           var sumOfNumberForEach = evenNumbers.forEach(function (numbers) {
+                    sumForEach += numbers;
+           });
+           console.log(sumForEach);
+
+	3.3. use filter and after that use function declared at 2.3
+           var sumMap = 0;
+
+           var sumOfNumberMap = evenNumbers.map(function(numbers) {
+                    sumMap = sumMap + numbers;
+           });
+           console.log(sumMap);
+
+4. WAF WR the sum of first n elements from an array
+
+          var array4 = [11, 12, 13, 14, 15, 16];   
+          var firstTreeElements = array4.slice(0, 3);          
+
+	3.1. use slice and after that use function declared at 2.1
+          var sumOfFirstTreeElements = firstTreeElements.reduce(function(total, item) {
+                     return total + item;
+          }, 0);
+          console.log(sumOfFirstTreeElements);
+
+	3.2. use slice and after that use function declared at 2.2
+          var sum5 = 0;
+
+             firstTreeElements.forEach(function(item) {
+                    sum5 += item;
+             });
+             console.log(sum5);
+
+	3.3. use slice and after that use function declared at 2.3
+           var sum6 = 0;
+
+              firstTreeElements.map(function(numbers) {
+                    sum6 += numbers;
+              });
+              console.log(sum6);
+
+
+5. what's the differecnce between slice and splice functions?
+      slice method :
+              The slice() method returns the selected elements in an array, as a new array object.
+              The slice() method selects the elements starting at the given start argument, and ends at, but does not include, the given end argument.
+              The original array will not be changed.
+      splice method :
+              The splice() method adds/removes items to/from an array, and returns the removed item(s).
+              This method changes the original array.
+
+6. WAF which returns an array of n elements; ex: createEmptyArray(3) ==> [0,0,0]
+   hint: use array.fill function
+        var emptyArray = [0,0,0];
+             //console.log(emptyArray.fill(3));
+        function fillNumber (numbers) {
+               var newArray = numbers.fill(3);
+               console.log(newArray);
+        };
+        fillNumber(emptyArray);
+
+
+7. WAF with 2 parameters (min, max) WR a random number between min and max
+   hint: do a search on internet how Math.random can be used
+       function randomNumbers (min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+       };
+       console.log(randomNumbers(3, 7));
+
+
+8. WAF WR with parameter n which returns an array of random n numbers  between min and max 
+   hint: 
+   use 6. to create the initial array == (1)
+   use forEach(element, index) over (1) and set the element from (1) as the result of 7
+   return (1)
+                  var newArray = [0];
+                  var randomNum = Math.floor(Math.random() * 10) + 1;
+                  var modifiedArray = newArray.fill(randomNum);
+                  console.log(newArray);
+
+
+9. WAF (write a function) (arr1, arr2) which concatenate 2 arrays
+            
+             var baieti = ['Vasile', 'Marius','David', 'Aris'];
+             var fete = ['Mariana', 'Andreea', 'Adela'];
+	
+         9.1. use concatenate function from array
+             
+              function grupUcode () {
+                      var concatArrays = fete.concat(baieti);
+                      console.log(concatArrays);
+              };
+              grupUcode();
+
+
+	9.2. use forEach function from array 
+	     hint: in that function declare use arr1 and forEach element from array2, push the element in arr1 and, in the final step,  return the arr1
+
+              
+
+	9.3. use reduce function;
+	     hint: the same as 1.2, but use reduce; Note: reduce receive the initial value and this initial value can be arr1;
+
+             fete = baieti.reduce(function (total, item) {
+                     total.push(item);
+                     return total;
+             }, fete);
+             console.log(fete);
+
+	9.4. use map function;
+		hint: the same as 1.2 but using map
+
+             
+
+10; use ternary operator over a numeric value n; if n< 18 will return true otherwise false;
+   hint: this should be simple; just use ternary operator documentation
+            
+           var age = 15;
+
+               if (age >= 18) {
+                       console.log('Can drink beer !');
+               } else {
+                       console.log('Can drink just Juice !');
+               };
+       
+
+11. sort an array of numbers  ascendent
+
+      var numbersArray = [8, 4, 12, 38, 1, 110, 6];
+             numbersArray.sort(function(a, b) {
+             return a-b;
+      });
+      console.log(numbersArray);
+
+12. sort an array of numbers  descendent
+
+      var numbersArray = [8, 4, 12, 38, 1, 110, 6];
+             numbersArray.sort(function(a, b) {
+             return b-a;
+      });
+      console.log(numbersArray);
+
+13.   WAF which receive as input parameter a boolean value; ascendent; if ascendent is true, it will return the array sorted ascendent otherwise descendent
+   hint: use ternary operator to get the necessary function; if ascendent ==> it will be the function name from 11. otherwise from 12;
+   note. you need only the function name and not have to call by using () during the ternary operation (1)
+   use the function (1) to return the corect value
+     
+            var numbersArray2 = [8, 4, 12, 38, 1, 110, 6];
+
+              function booleanValue (value) {
+                        if (value === 'ascendent') {
+                             numbersArray.sort(function(a, b) {
+                             return a-b;
+                        });
+                             console.log(numbersArray);
+                          }else if(value === 'descendent') {
+                             numbersArray.sort(function(a, b) {
+                             return b-a;
+                        });
+                             console.log(numbersArray);
+                          }else{
+                             console.log(numbersArray2);
+                          }
+                        }
+                        booleanValue('ascendent');
+
+14. WAF which receive a string and returns the sum of charcodes of each character from string
+
+              function sumCharCodeIn (string) {
+                    var stringToArray = string.split("");
+                    var sum = 0;
+                stringToArray.forEach( function(char) {
+                    var code = char.charCodeAt();
+                    sum += code;
+                 })
+                  console.log(sum);
+              }
+              sumCharCodeIn("Vasile");
+
+15. WAF which receive an array of numbers and returns a string representing the fromCharCode ...
+
+              
+
+16. WAF which receive a string and character; the response will be the reversed initial string without character: ex; removeChar('alabalaportocala') => 'lblportocl'
+hint: use split and after that filter and after that reverse and after that join
+
+17. having an array of arrays, calculate the sum of all numbers; ex: [[1,2,3],[4],[5,6,7,8],[9,10]] ==> 55
+
+//https://www.freecodecamp.org/news/reduce-f47a7da511a9/ for a little bit later
+
+
+
+
+
+

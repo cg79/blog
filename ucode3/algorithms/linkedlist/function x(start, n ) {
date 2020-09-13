@@ -1,0 +1,10 @@
+function x(start, n ) {
+	
+	var c = 0;
+	var r = start;
+	while(c < 10) {
+		start = start * r % n;
+		console.log(c, start);
+		c++;
+	}
+}

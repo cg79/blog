@@ -1,0 +1,25 @@
+
+sfaturi
+1. invatati syntaxa pe de rost. ex. for, switch, while
+2. ajutati-va online
+
+
+
+
+- do while
+- switch
+
+
+
+- timers
+	- setInterval
+	- set timeout
+
+- recursivitate
+
+- promises
+
+
+-source tree
+
+- exercitii	

@@ -1,0 +1,7 @@
+- cum au fost statements
+
+- cum au fost timerele / recursivitatea
+
+- promises
+
+- objects 

@@ -1,0 +1,92 @@
+
+nu trebuie sa faceti toate exercitiile; 
+
+1. sa ne axam pe functii cat mai mult
+2. sa notati conceptele; pana acum avem doar coertion dar o sa mai fie
+3. INTELEGETI CERINTELE PRIMA DATA!!!
+
+
+4. denumirea functiilor, denumirea parametrilor!!!
+ - selectDirectory vs onDirectorySelected
+ - daca o functie are un nume sugestiv, implementarea ei trebuie sa fie ca si cea din nume; sa nu avem o functie add2Numbers(a,b) insa functia sa implementeze inmultirea lor
+
+ - o functie (care nu e flow) sa aiba o singura functionalitate. de exemplu o functie "ridicaManaDreapta" sa nu implementeze si "clipesteCuOchiulStang". "floul" o sa cuprinda ambele (ceea ce e ok);acest concept se numeste SRP (single responsability principle) + closeDoor example
+ - folositi exceptii fara probleme
+ - encapsulati parametrii de acelasi fel intr-un obiect separat; aici apare conceptul de encapsulare. de exemplu calcularea distantei dintre 2 puncte :
+   getDistanceBetween2Points; ce preferati? (x1,y1, x2,y2)? sau (start, end), unde start,end = obiect cu proprietatile {x,y}
+ - nu folositi 2 parametrii pentru aceeasi semnificatie;
+   sa zicem ca avem varsta unei persoane; age = 19; in functie declaram varsta
+
+
+
+
+5. ajutati-va intre voi. puneti intrebari pe grup
+
+6. intrebati-va de ce e facut asa..., sau cum se poate face altfel, sau cum ai face tu. ex. sa presupunem ca nu exista functia filter. cum ai scrie o astfel de functie?
+
+
+NOTA: nu exista cod care sa nu apartina unei functii; in lumea reala...
+
+sa pastrati o structura de directoare corecta;
+
+javascript
+ concepte
+ 	coertion
+ 	SRP - close door example
+
+ 	readable code
+ 	door.state = ... vs door.close() vs closeDoor(door)
+
+ 	function toggleDoor() {
+ 	  door.state = door.state === 'open' ? 'closed' : 'open';
+ 	}
+
+ 	function openDoor() {
+ 	  door.state = 'open';
+ 	}
+ 	function closeDoor() {
+ 	  door.state = door.state ='closed'
+ 	}
+
+
+
+
+ 	execution context
+
+ 	encapsulare
+
+ 	template method
+
+ 	write inverse code; if(...) {...} vs if(!xxx) {return;}
+
+
+
+ 01-operatori
+   exercitii
+   rezolvari
+ 02-data-types
+   exercitii
+   rezolvari
+
+
+
+ application
+   front-end-react_app
+   back-end-node-server
+
+
+ html-css
+ 	flex-box
+ 	css-elements
+
+
+ ce facem astazi
+ review pe exercitii
+ continuare prezentare functii
+ statements
+
+ chaining
+ prototyping
+
+
+
