@@ -9,58 +9,55 @@ baselink: "algo"
 banner: "./images/banner.jpg"
 ---
 
-import Counter from "$components/Counter";
+http://regex101.com
 
-Showcasing how MDX for Gatsby.js works ... The Counter component is imported explicitly, but since we are using MDXProvider, we can also define global components which don't need to be imported (e.g. Link, YouTube).
+## code between 2 characters
 
-## A React component in Markdown (imported component):
-
-<Counter initialCounter={3} />
-
-https://regex101.com/
-
-## Code Snippet
-
-```jsx{1,4-6}
-import React from 'react';
-
-const Counter = initialCounter => {
-  const [counter, setCounter] = React.useState(initialCounter);
-
-  const onIncrement = () => {
-    setCounter(c => c + 1);
-  };
-
-  const onIncrement = () => {
-    setCounter(c => c - 1);
-  };
-
-  return (
-    <div>
-      {counter}
-
-      <div>
-        <button onClick={onIncrement} type="button">
-          Increment
-        </button>
-        <button onClick={onDecrement} type="button">
-          Decrement
-        </button>
-      </div>
-    </div>
-  );
-};
-
-export default Counter;
+```javascript
+function textBetweensquareBrackets(str) {
+ var x = str.match(\[.*?\]\g);
+ 
+ return x;
+ }
 ```
 
-## An external Link:
 
-<Link to="https://roadtoreact.com/">Find out more about it</Link>
+## GROUPS. 
 
-## An Image:
+```javascript
+ function dot(s) {
+  var re = /(\.|\!|\?)(\s{0,})(\w)/g;
+  s = s.replace(re, function(x, $1, $2, $3) {
+  return $1 + " " + $3.toUpperCase();
+  });
+ return s;
+ }
 
-![Some Cover Image](./images/banner.jpg)
+
+dot('.    d') => . D
+dot('    d') ==>     d
+
+ ```
 
 
-That's it.
+ ## Largest word
+
+ ```javascript
+function largestWord(str) {
+ var x = str.match(/\w+/g);
+ var y = x.map(function(t) { return t.length });
+ var z = x[y.indexOf(Math.max.apply(Math, y))];
+ return z;
+ }
+```
+
+
+## Comment
+ ```javascript
+var str = "//*asdf*/".match(/^\/\/.*/g);
+```
+
+## Comment multiline
+ ```javascript
+var str = "asd".match(/\*((.|\n)*)\*\//g)
+```

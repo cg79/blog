@@ -1,5 +1,5 @@
 ---
-slug: "/algo/arrays/sum-dowhile"
+slug: "/algo/linked-list"
 date: "2020-01-26T03:49:16.408Z"
 title: "Sum of array"
 description: "MDX Example Description ..."
@@ -8,61 +8,70 @@ keywords: []
 banner: "./images/banner.jpg"
 ---
 
-
+## Create linked list
 ```javascript
-sumDoWhile = (arr) => {
-	if(!arr.length) {
-		return 0;
-	}
-	let sum = 0;
-	let index = 0;
-	do {
-		sum += arr[index]; 
-		index ++;
-	} while(index < arr.length)
-	return sum;
+class Node {
+	val = 0;
+	next = null;
 }
+
+
+function createLinkedList(arr) {
+	var head  = new Node();
+	head.val = 1;
+	head.next = null;
+
+	var curentNode = head;
+	for(var i=1;i<arr.length;i++) {
+		var newnode = new Node();
+		newnode.val = arr[i];
+		newnode.next = null;
+		curentNode.next = newnode;
+
+		curentNode = newnode;
+	}
+
+	return head;
+}
+
+var L = createLinkedList([1,2,3]);
+console.log(L);
+
 ```
 
-For testing, you can use this function as:
+## Reverse linked list
 
 ```javascript
-var node = function(v) {
-  this.v =v;
-  this.setNext = function(next) {
-    this.next = next;
-  }
-}
-var a= [1,2,3];
-var root = new node(0);
-var c = root;
-for(var i=0;i<a.length;i++) {
-  var nnode = new node(a[i]);
-  c.setNext(nnode);
-  c = nnode;
-}
 
-function read(root) {
-  var result = [];
-  result.push(root.v);
-  var c = root;
-  while(c.next) {
-c = c.next;   
-result.push(c.v);
-    
-  }
-return result;
-}
+function reverseLinkedlIst(head) {
+	
+	 // 1->2->3 -> null
+	// 3->2->1
+
+	// p = null;
+	// c = 1;
+	// n = 2;
+
+	
 
 
-function removeValue(v, root) {
-var p = root;
-while(p.next && p.next.v !== v) {
-  p = p.next;
+
+
+	var prev = null;
+	var current = head;
+
+	while(current) {
+		var next = current.next;
+		current.next = prev;
+
+
+		prev = current;
+		current = next;
+	}
+
+	return prev;
 }
 
-var tail = p.next.next;
-p.next = tail;
-
-}
+var r = reverseLinkedlIst(L);
+console.log(r);
 ```
