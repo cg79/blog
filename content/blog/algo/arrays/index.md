@@ -12,15 +12,20 @@ banner: "./images/banner.jpg"
 
 ## push
 
-
 ```javascript
 var arr = [];
 arr.push(2); // arr = [2]
 ```
 
 
-## An external Link:
+## pop
+```javascript
+var arr = [1,2,3];
+var lastElement = arr.pop();
 
+// lastElement = 3;
+//arr = [1,2]
+```
 
 ## An external Link:
 

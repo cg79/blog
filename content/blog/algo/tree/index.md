@@ -8,7 +8,8 @@ keywords: []
 baselink: "algo"
 banner: "./images/banner.jpg"
 ---
-
+https://www.digitalocean.com/community/tutorials/js-tree-traversal
+https://levelup.gitconnected.com/how-to-traverse-a-tree-using-javascript-c9a79826e819
 Tree
 
 1. create directory 

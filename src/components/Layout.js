@@ -28,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
   ${() => {
     /* Override PrismJS Defaults */ return null;
   }}
+  
 
   pre {
     background-color: #2f1e2e !important;
@@ -50,7 +51,9 @@ const GlobalStyle = createGlobalStyle`
   }
   
   .navcontainer > li {
-    flex: 1;
+    //flex: 1;
+    margin: 1rem 1rem 0 0;
+
   }
 
   .search {  
@@ -206,6 +209,10 @@ export default ({ site, frontmatter = {}, children }) => {
 
                   <li>
                       <a className="dropdown-item" href="/mongo">Mongo</a>
+                  </li>
+
+                  <li>
+                      <a className="dropdown-item" href="/databases">Databases</a>
                   </li>
 
                   <li>

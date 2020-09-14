@@ -10,7 +10,7 @@ banner: "./images/banner.jpg"
 ---
 
 
-![image info](inorder.gif)
+![image info](/assets/inorder.gif)
 
 Tree
 
