@@ -1,3 +1,9 @@
+
+https://www.digitalocean.com/community/tutorials/js-tree-traversal
+https://js-algorithms.tutorialhorizon.com/2015/10/12/binary-tree-traversal/
+
+
+
 class node {
   val = 0;
   left = null;
@@ -83,7 +89,6 @@ function calculateLeftRight(tree){
 }
 
 
-https://www.digitalocean.com/community/tutorials/js-tree-traversal
 
 
 
