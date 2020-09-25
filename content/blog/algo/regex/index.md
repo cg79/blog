@@ -11,6 +11,8 @@ banner: "./images/banner.jpg"
 
 http://regex101.com
 
+https://stackoverflow.com/questions/3758798/how-to-search-for-occurrences-of-more-than-one-space-between-words-in-a-line
+
 ## code between 2 characters
 
 ```javascript

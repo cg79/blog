@@ -10,6 +10,44 @@ banner: "./images/banner.jpg"
 ---
 
 
+1. string
+2. array
+3. recursion
+4. tree
+    https://www.digitalocean.com/community/tutorials/js-tree-traversal
+
+    dfs
+        - expression evaluation
+    bfs
+5. linked list
+6. backtracking
+7. matrix
+8. hash 
+9. https://coderbyte.com/algorithm/two-sum-problem
+10. memoization
+    n th fibonaci number
+11. regex
+12. sorting
+    buble sort
+    merge sort
+    quick sort
+13. greedy
+    - max sequence of equal numbers
+14. divide and conquer
+    - maximum subarray sum   == kadane algorithm
+15. stack/queue - check paranthesis
+16. date time;
+    friendly date
+17. functional programming
+
+    [1,2,3].reduce((a,b)=> {
+        console.log(a, b);
+        return b;
+    })
+    
+
+
+
 ![image info](/assets/inorder.gif)
 
 Tree
