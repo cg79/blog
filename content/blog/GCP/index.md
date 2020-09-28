@@ -1,5 +1,5 @@
 ---
-slug: "/react"
+slug: "/patterns"
 date: "2020-01-26T03:49:16.408Z"
 title: "Arrays"
 description: "MDX Example Description ..."
