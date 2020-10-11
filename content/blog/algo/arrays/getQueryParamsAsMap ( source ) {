@@ -1,0 +1,17 @@
+getQueryParamsAsMap = ( source ) => {
+        if ( !source ) {
+            return {};
+        }
+        const paramMap = {};
+
+        //in case the source starts with #, ? or &, the first character is removed. 
+        source = source.replace( /^(#\/|#|\?|&)/, "" ).replace('from_ims=true?', 'from_ims=true&');
+    
+        source.split( "&" ).forEach( keyValuePair => {
+            if ( keyValuePair.length ) {
+                const arr = keyValuePair.split( "=" );
+                paramMap[ arr[ 0 ] ] = decodeURIComponent( arr[ 1 ] );
+            }
+        } );
+        return paramMap;
+    }

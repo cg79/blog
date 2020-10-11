@@ -1,0 +1,22 @@
+function maxarr(arr) {
+// 1 1 1 1 1 2 2 2 2 2
+var left = 0;
+var right = 1;
+var result = [];
+while(right < arr.length) {
+        if(arr[left] !== arr[right]) {
+            result.push(arr.slice(left, right));
+            left = right;
+            
+        }
+        right ++;
+
+}
+if(right > left) {
+	result.push(arr.slice(left, right));	
+}
+
+
+return result;
+
+}

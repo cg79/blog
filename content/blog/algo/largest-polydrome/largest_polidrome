@@ -1,0 +1,46 @@
+function lp(source,i) {
+	var l = i;
+	var r = i;
+
+	var g = source[i];
+	var position = i;
+
+	var substr = g;
+	while((r+1)< source.length && source[r+1] === g ) {
+
+		substr += g;
+		r++;
+	}
+
+	position= r +1;
+
+	while((l-1)>=0 && (r+1) < source.length && source[l-1] === source[r+1] ) {
+		l--;
+		r++;
+	}
+
+//debugger;
+	return {substr: source.substr(l, r-l +1), position};
+}
+
+var longestPalindrome = function(s) {
+	
+	var r = "";
+	var position = 0;
+	//debugger;
+	while(position < s.length) {
+		var x = lp(s,position);
+		position = x.position;
+
+		if(x.substr.length > r.length) {
+			r = x.substr;
+		}
+
+	}
+	
+
+	return r;
+
+}
+
+//start("11aaa11")

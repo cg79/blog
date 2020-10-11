@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://google.qwiklabs.com/focuses/2794?parent=catalog -->
+<html lang="en" class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="[]" name="active-experiments">
+<meta content="{&quot;userId&quot;:3563468}" name="help-api-product-data">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="C7sNVHA6L52jCDA8QTBV3RRBuw7ENgTOUJoO3/bMPpUxPr1P/Ygo5vxnKPLCLqcGvNegA/djmGbgRgruiZCe2w==">
+<title>A Tour of Qwiklabs and Google Cloud | Qwiklabs</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport">
+<meta content="1rRsY0INj8RvwB5EF5pwdxt2A2P9aDgAlsICaJ0d5w0" name="google-site-verification">
+<meta content="#3681E4" property="msapplication-TileColor">
+<meta content="/favicon-144.png" property="msapplication-TileImage">
+<meta content="In this first hands-on lab you will access Qwiklabs and the Google Cloud Platform Console and use the basic GCP features: Projects, Resources, IAM Users, Roles, Permissions, APIs, and Cloud Shell." name="description">
+<meta content="Qwiklabs" name="author">
+<meta content="A Tour of Qwiklabs and Google Cloud | Qwiklabs" property="og:title">
+<meta content="website" property="og:type">
+<meta content="/favicon-144.png" property="og:image">
+<meta content="Qwiklabs" property="og:site_name">
+<meta content="In this first hands-on lab you will access Qwiklabs and the Google Cloud Platform Console and use the basic GCP features: Projects, Resources, IAM Users, Roles, Permissions, APIs, and Cloud Shell." property="og:description">
+<meta content="/qwiklabs_logo_900x887.png" property="og:logo" size="900x887">
+<meta content="/qwiklabs_logo_994x187.png" property="og:logo" size="994x187">
+<link href="https://google.qwiklabs.com/favicon-32.png" rel="shortcut icon">
+<link color="#3681E4" href="https://google.qwiklabs.com/favicon-svg.svg" rel="mask-icon">
+<link href="https://google.qwiklabs.com/favicon-180.png" rel="apple-touch-icon-precomposed">
+<link rel="stylesheet" media="screen" href="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/css">
+
+
+<!--[if lt IE 9]>
+<script src='http://html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+<![endif]-->
+<!--[endif]>  <![endif]-->
+<script type="text/javascript" async="" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/js"></script><script type="text/javascript" async="" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/analytics.js"></script><script type="text/javascript" async="" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/analytics.min.js"></script><script type="text/javascript" async="" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-wK7AxeV5XLs+6hW8tUU3xM9RkycJSMPxwWaBekhtR6H0Wlaj1LStQyTbqBVh5ddz"></script><script type="text/javascript" async="" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-wK7AxeV5XLs+6hW8tUU3xM9RkycJSMPxwWaBekhtR6H0Wlaj1LStQyTbqBVh5ddz"></script><script type="text/javascript" id="www-widgetapi-script" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/www-widgetapi.js" async=""></script><script>
+//<![CDATA[
+window.gon={};gon.current_user={"firstname":"Claudiu","lastname":"Gombos","fullname":"Claudiu Gombos","company":"Login with Google","email":"claudiu.gombos@globant.com","origin":"google-run, direct","subscriptions":0,"id":"dc600f17665b381cbefc5438433e9d17","qlCreatedAt":"2020-09-28 07:09:09 UTC","optIn":null};gon.segment="j4Im8pqIko0Lxq4wVVZWMPMM0EroHUvb";gon.deployment="google-run";
+//]]>
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.qwiklabs.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.qwiklabs.com/catalog?keywords={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script id="ze-snippet" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/snippet.js"></script>
+
+
+
+<link rel="stylesheet" media="all" href="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/application-fb19c67dbfe1988e197c03301b482c3af6558c8a2e1b0ca177c6d5737642872b.css">
+<script>
+  EVENT_SOURCE_BASE_URL = "https://google-run.qwiklabs.com/nchan-sub?id=";
+</script>
+<script src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/webcomponents-loader-408088dc333247a761de5f2b2a4ba1cabd2bc36579f83ba92a559eb3682a9b77.js"></script>
+<script src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/hallofmirrors-beb15c5198c4f33ed1dc98ae4f5fc1264db27693ed9f6dadbe3bf0b207169d0c.js"></script>
+<custom-style>
+  <style is="custom-style">[hidden] {
+  display: none !important;
+}
+
+</style>
+</custom-style>
+<custom-style>
+  <style is="custom-style">html {
+  --layout_-_display:  flex;;
+
+      --layout-inline_-_display:  inline-flex;;
+
+      --layout-horizontal_-_display:  var(--layout_-_display); --layout-horizontal_-_-ms-flex-direction:  row; --layout-horizontal_-_-webkit-flex-direction:  row; --layout-horizontal_-_flex-direction:  row;;
+
+      --layout-horizontal-reverse_-_display:  var(--layout_-_display); --layout-horizontal-reverse_-_-ms-flex-direction:  row-reverse; --layout-horizontal-reverse_-_-webkit-flex-direction:  row-reverse; --layout-horizontal-reverse_-_flex-direction:  row-reverse;;
+
+      --layout-vertical_-_display:  var(--layout_-_display); --layout-vertical_-_-ms-flex-direction:  column; --layout-vertical_-_-webkit-flex-direction:  column; --layout-vertical_-_flex-direction:  column;;
+
+      --layout-vertical-reverse_-_display:  var(--layout_-_display); --layout-vertical-reverse_-_-ms-flex-direction:  column-reverse; --layout-vertical-reverse_-_-webkit-flex-direction:  column-reverse; --layout-vertical-reverse_-_flex-direction:  column-reverse;;
+
+      --layout-wrap_-_-ms-flex-wrap:  wrap; --layout-wrap_-_-webkit-flex-wrap:  wrap; --layout-wrap_-_flex-wrap:  wrap;;
+
+      --layout-wrap-reverse_-_-ms-flex-wrap:  wrap-reverse; --layout-wrap-reverse_-_-webkit-flex-wrap:  wrap-reverse; --layout-wrap-reverse_-_flex-wrap:  wrap-reverse;;
+
+      --layout-flex-auto_-_-ms-flex:  1 1 auto; --layout-flex-auto_-_-webkit-flex:  1 1 auto; --layout-flex-auto_-_flex:  1 1 auto;;
+
+      --layout-flex-none_-_-ms-flex:  none; --layout-flex-none_-_-webkit-flex:  none; --layout-flex-none_-_flex:  none;;
+
+      --layout-flex_-_-ms-flex:  1 1 0.000000001px; --layout-flex_-_-webkit-flex:  1; --layout-flex_-_flex:  1; --layout-flex_-_-webkit-flex-basis:  0.000000001px; --layout-flex_-_flex-basis:  0.000000001px;;
+
+      --layout-flex-2_-_-ms-flex:  2; --layout-flex-2_-_-webkit-flex:  2; --layout-flex-2_-_flex:  2;;
+
+      --layout-flex-3_-_-ms-flex:  3; --layout-flex-3_-_-webkit-flex:  3; --layout-flex-3_-_flex:  3;;
+
+      --layout-flex-4_-_-ms-flex:  4; --layout-flex-4_-_-webkit-flex:  4; --layout-flex-4_-_flex:  4;;
+
+      --layout-flex-5_-_-ms-flex:  5; --layout-flex-5_-_-webkit-flex:  5; --layout-flex-5_-_flex:  5;;
+
+      --layout-flex-6_-_-ms-flex:  6; --layout-flex-6_-_-webkit-flex:  6; --layout-flex-6_-_flex:  6;;
+
+      --layout-flex-7_-_-ms-flex:  7; --layout-flex-7_-_-webkit-flex:  7; --layout-flex-7_-_flex:  7;;
+
+      --layout-flex-8_-_-ms-flex:  8; --layout-flex-8_-_-webkit-flex:  8; --layout-flex-8_-_flex:  8;;
+
+      --layout-flex-9_-_-ms-flex:  9; --layout-flex-9_-_-webkit-flex:  9; --layout-flex-9_-_flex:  9;;
+
+      --layout-flex-10_-_-ms-flex:  10; --layout-flex-10_-_-webkit-flex:  10; --layout-flex-10_-_flex:  10;;
+
+      --layout-flex-11_-_-ms-flex:  11; --layout-flex-11_-_-webkit-flex:  11; --layout-flex-11_-_flex:  11;;
+
+      --layout-flex-12_-_-ms-flex:  12; --layout-flex-12_-_-webkit-flex:  12; --layout-flex-12_-_flex:  12;;
+
+      
+
+      --layout-start_-_-ms-flex-align:  start; --layout-start_-_-webkit-align-items:  flex-start; --layout-start_-_align-items:  flex-start;;
+
+      --layout-center_-_-ms-flex-align:  center; --layout-center_-_-webkit-align-items:  center; --layout-center_-_align-items:  center;;
+
+      --layout-end_-_-ms-flex-align:  end; --layout-end_-_-webkit-align-items:  flex-end; --layout-end_-_align-items:  flex-end;;
+
+      --layout-baseline_-_-ms-flex-align:  baseline; --layout-baseline_-_-webkit-align-items:  baseline; --layout-baseline_-_align-items:  baseline;;
+
+      
+
+      --layout-start-justified_-_-ms-flex-pack:  start; --layout-start-justified_-_-webkit-justify-content:  flex-start; --layout-start-justified_-_justify-content:  flex-start;;
+
+      --layout-center-justified_-_-ms-flex-pack:  center; --layout-center-justified_-_-webkit-justify-content:  center; --layout-center-justified_-_justify-content:  center;;
+
+      --layout-end-justified_-_-ms-flex-pack:  end; --layout-end-justified_-_-webkit-justify-content:  flex-end; --layout-end-justified_-_justify-content:  flex-end;;
+
+      --layout-around-justified_-_-ms-flex-pack:  distribute; --layout-around-justified_-_-webkit-justify-content:  space-around; --layout-around-justified_-_justify-content:  space-around;;
+
+      --layout-justified_-_-ms-flex-pack:  justify; --layout-justified_-_-webkit-justify-content:  space-between; --layout-justified_-_justify-content:  space-between;;
+
+      --layout-center-center_-_-ms-flex-align:  var(--layout-center_-_-ms-flex-align); --layout-center-center_-_-webkit-align-items:  var(--layout-center_-_-webkit-align-items); --layout-center-center_-_align-items:  var(--layout-center_-_align-items); --layout-center-center_-_-ms-flex-pack:  var(--layout-center-justified_-_-ms-flex-pack); --layout-center-center_-_-webkit-justify-content:  var(--layout-center-justified_-_-webkit-justify-content); --layout-center-center_-_justify-content:  var(--layout-center-justified_-_justify-content);;
+
+      
+
+      --layout-self-start_-_-ms-align-self:  flex-start; --layout-self-start_-_-webkit-align-self:  flex-start; --layout-self-start_-_align-self:  flex-start;;
+
+      --layout-self-center_-_-ms-align-self:  center; --layout-self-center_-_-webkit-align-self:  center; --layout-self-center_-_align-self:  center;;
+
+      --layout-self-end_-_-ms-align-self:  flex-end; --layout-self-end_-_-webkit-align-self:  flex-end; --layout-self-end_-_align-self:  flex-end;;
+
+      --layout-self-stretch_-_-ms-align-self:  stretch; --layout-self-stretch_-_-webkit-align-self:  stretch; --layout-self-stretch_-_align-self:  stretch;;
+
+      --layout-self-baseline_-_-ms-align-self:  baseline; --layout-self-baseline_-_-webkit-align-self:  baseline; --layout-self-baseline_-_align-self:  baseline;;
+
+      
+
+      --layout-start-aligned_-_-ms-flex-line-pack:  start; --layout-start-aligned_-_-ms-align-content:  flex-start; --layout-start-aligned_-_-webkit-align-content:  flex-start; --layout-start-aligned_-_align-content:  flex-start;;
+
+      --layout-end-aligned_-_-ms-flex-line-pack:  end; --layout-end-aligned_-_-ms-align-content:  flex-end; --layout-end-aligned_-_-webkit-align-content:  flex-end; --layout-end-aligned_-_align-content:  flex-end;;
+
+      --layout-center-aligned_-_-ms-flex-line-pack:  center; --layout-center-aligned_-_-ms-align-content:  center; --layout-center-aligned_-_-webkit-align-content:  center; --layout-center-aligned_-_align-content:  center;;
+
+      --layout-between-aligned_-_-ms-flex-line-pack:  justify; --layout-between-aligned_-_-ms-align-content:  space-between; --layout-between-aligned_-_-webkit-align-content:  space-between; --layout-between-aligned_-_align-content:  space-between;;
+
+      --layout-around-aligned_-_-ms-flex-line-pack:  distribute; --layout-around-aligned_-_-ms-align-content:  space-around; --layout-around-aligned_-_-webkit-align-content:  space-around; --layout-around-aligned_-_align-content:  space-around;;
+
+      
+
+      --layout-block_-_display:  block;;
+
+      --layout-invisible_-_visibility:  hidden !important;;
+
+      --layout-relative_-_position:  relative;;
+
+      --layout-fit_-_position:  absolute; --layout-fit_-_top:  0; --layout-fit_-_right:  0; --layout-fit_-_bottom:  0; --layout-fit_-_left:  0;;
+
+      --layout-scroll_-_-webkit-overflow-scrolling:  touch; --layout-scroll_-_overflow:  auto;;
+
+      --layout-fullbleed_-_margin:  0; --layout-fullbleed_-_height:  100vh;;
+
+      
+
+      --layout-fixed-top_-_position:  fixed; --layout-fixed-top_-_top:  0; --layout-fixed-top_-_left:  0; --layout-fixed-top_-_right:  0;;
+
+      --layout-fixed-right_-_position:  fixed; --layout-fixed-right_-_top:  0; --layout-fixed-right_-_right:  0; --layout-fixed-right_-_bottom:  0;;
+
+      --layout-fixed-bottom_-_position:  fixed; --layout-fixed-bottom_-_right:  0; --layout-fixed-bottom_-_bottom:  0; --layout-fixed-bottom_-_left:  0;;
+
+      --layout-fixed-left_-_position:  fixed; --layout-fixed-left_-_top:  0; --layout-fixed-left_-_bottom:  0; --layout-fixed-left_-_left:  0;;
+}
+
+</style>
+</custom-style><style>[hidden] { display: none !important; }</style><custom-style>
+  <style is="custom-style">html {
+  --google-red-100: #f4c7c3;
+      --google-red-300: #e67c73;
+      --google-red-500: #db4437;
+      --google-red-700: #c53929;
+
+      --google-blue-100: #c6dafc;
+      --google-blue-300: #7baaf7;
+      --google-blue-500: #4285f4;
+      --google-blue-700: #3367d6;
+
+      --google-green-100: #b7e1cd;
+      --google-green-300: #57bb8a;
+      --google-green-500: #0f9d58;
+      --google-green-700: #0b8043;
+
+      --google-yellow-100: #fce8b2;
+      --google-yellow-300: #f7cb4d;
+      --google-yellow-500: #f4b400;
+      --google-yellow-700: #f09300;
+
+      --google-grey-100: #f5f5f5;
+      --google-grey-300: #e0e0e0;
+      --google-grey-500: #9e9e9e;
+      --google-grey-700: #616161;
+
+      
+
+      --paper-red-50: #ffebee;
+      --paper-red-100: #ffcdd2;
+      --paper-red-200: #ef9a9a;
+      --paper-red-300: #e57373;
+      --paper-red-400: #ef5350;
+      --paper-red-500: #f44336;
+      --paper-red-600: #e53935;
+      --paper-red-700: #d32f2f;
+      --paper-red-800: #c62828;
+      --paper-red-900: #b71c1c;
+      --paper-red-a100: #ff8a80;
+      --paper-red-a200: #ff5252;
+      --paper-red-a400: #ff1744;
+      --paper-red-a700: #d50000;
+
+      --paper-pink-50: #fce4ec;
+      --paper-pink-100: #f8bbd0;
+      --paper-pink-200: #f48fb1;
+      --paper-pink-300: #f06292;
+      --paper-pink-400: #ec407a;
+      --paper-pink-500: #e91e63;
+      --paper-pink-600: #d81b60;
+      --paper-pink-700: #c2185b;
+      --paper-pink-800: #ad1457;
+      --paper-pink-900: #880e4f;
+      --paper-pink-a100: #ff80ab;
+      --paper-pink-a200: #ff4081;
+      --paper-pink-a400: #f50057;
+      --paper-pink-a700: #c51162;
+
+      --paper-purple-50: #f3e5f5;
+      --paper-purple-100: #e1bee7;
+      --paper-purple-200: #ce93d8;
+      --paper-purple-300: #ba68c8;
+      --paper-purple-400: #ab47bc;
+      --paper-purple-500: #9c27b0;
+      --paper-purple-600: #8e24aa;
+      --paper-purple-700: #7b1fa2;
+      --paper-purple-800: #6a1b9a;
+      --paper-purple-900: #4a148c;
+      --paper-purple-a100: #ea80fc;
+      --paper-purple-a200: #e040fb;
+      --paper-purple-a400: #d500f9;
+      --paper-purple-a700: #aa00ff;
+
+      --paper-deep-purple-50: #ede7f6;
+      --paper-deep-purple-100: #d1c4e9;
+      --paper-deep-purple-200: #b39ddb;
+      --paper-deep-purple-300: #9575cd;
+      --paper-deep-purple-400: #7e57c2;
+      --paper-deep-purple-500: #673ab7;
+      --paper-deep-purple-600: #5e35b1;
+      --paper-deep-purple-700: #512da8;
+      --paper-deep-purple-800: #4527a0;
+      --paper-deep-purple-900: #311b92;
+      --paper-deep-purple-a100: #b388ff;
+      --paper-deep-purple-a200: #7c4dff;
+      --paper-deep-purple-a400: #651fff;
+      --paper-deep-purple-a700: #6200ea;
+
+      --paper-indigo-50: #e8eaf6;
+      --paper-indigo-100: #c5cae9;
+      --paper-indigo-200: #9fa8da;
+      --paper-indigo-300: #7986cb;
+      --paper-indigo-400: #5c6bc0;
+      --paper-indigo-500: #3f51b5;
+      --paper-indigo-600: #3949ab;
+      --paper-indigo-700: #303f9f;
+      --paper-indigo-800: #283593;
+      --paper-indigo-900: #1a237e;
+      --paper-indigo-a100: #8c9eff;
+      --paper-indigo-a200: #536dfe;
+      --paper-indigo-a400: #3d5afe;
+      --paper-indigo-a700: #304ffe;
+
+      --paper-blue-50: #e3f2fd;
+      --paper-blue-100: #bbdefb;
+      --paper-blue-200: #90caf9;
+      --paper-blue-300: #64b5f6;
+      --paper-blue-400: #42a5f5;
+      --paper-blue-500: #2196f3;
+      --paper-blue-600: #1e88e5;
+      --paper-blue-700: #1976d2;
+      --paper-blue-800: #1565c0;
+      --paper-blue-900: #0d47a1;
+      --paper-blue-a100: #82b1ff;
+      --paper-blue-a200: #448aff;
+      --paper-blue-a400: #2979ff;
+      --paper-blue-a700: #2962ff;
+
+      --paper-light-blue-50: #e1f5fe;
+      --paper-light-blue-100: #b3e5fc;
+      --paper-light-blue-200: #81d4fa;
+      --paper-light-blue-300: #4fc3f7;
+      --paper-light-blue-400: #29b6f6;
+      --paper-light-blue-500: #03a9f4;
+      --paper-light-blue-600: #039be5;
+      --paper-light-blue-700: #0288d1;
+      --paper-light-blue-800: #0277bd;
+      --paper-light-blue-900: #01579b;
+      --paper-light-blue-a100: #80d8ff;
+      --paper-light-blue-a200: #40c4ff;
+      --paper-light-blue-a400: #00b0ff;
+      --paper-light-blue-a700: #0091ea;
+
+      --paper-cyan-50: #e0f7fa;
+      --paper-cyan-100: #b2ebf2;
+      --paper-cyan-200: #80deea;
+      --paper-cyan-300: #4dd0e1;
+      --paper-cyan-400: #26c6da;
+      --paper-cyan-500: #00bcd4;
+      --paper-cyan-600: #00acc1;
+      --paper-cyan-700: #0097a7;
+      --paper-cyan-800: #00838f;
+      --paper-cyan-900: #006064;
+      --paper-cyan-a100: #84ffff;
+      --paper-cyan-a200: #18ffff;
+      --paper-cyan-a400: #00e5ff;
+      --paper-cyan-a700: #00b8d4;
+
+      --paper-teal-50: #e0f2f1;
+      --paper-teal-100: #b2dfdb;
+      --paper-teal-200: #80cbc4;
+      --paper-teal-300: #4db6ac;
+      --paper-teal-400: #26a69a;
+      --paper-teal-500: #009688;
+      --paper-teal-600: #00897b;
+      --paper-teal-700: #00796b;
+      --paper-teal-800: #00695c;
+      --paper-teal-900: #004d40;
+      --paper-teal-a100: #a7ffeb;
+      --paper-teal-a200: #64ffda;
+      --paper-teal-a400: #1de9b6;
+      --paper-teal-a700: #00bfa5;
+
+      --paper-green-50: #e8f5e9;
+      --paper-green-100: #c8e6c9;
+      --paper-green-200: #a5d6a7;
+      --paper-green-300: #81c784;
+      --paper-green-400: #66bb6a;
+      --paper-green-500: #4caf50;
+      --paper-green-600: #43a047;
+      --paper-green-700: #388e3c;
+      --paper-green-800: #2e7d32;
+      --paper-green-900: #1b5e20;
+      --paper-green-a100: #b9f6ca;
+      --paper-green-a200: #69f0ae;
+      --paper-green-a400: #00e676;
+      --paper-green-a700: #00c853;
+
+      --paper-light-green-50: #f1f8e9;
+      --paper-light-green-100: #dcedc8;
+      --paper-light-green-200: #c5e1a5;
+      --paper-light-green-300: #aed581;
+      --paper-light-green-400: #9ccc65;
+      --paper-light-green-500: #8bc34a;
+      --paper-light-green-600: #7cb342;
+      --paper-light-green-700: #689f38;
+      --paper-light-green-800: #558b2f;
+      --paper-light-green-900: #33691e;
+      --paper-light-green-a100: #ccff90;
+      --paper-light-green-a200: #b2ff59;
+      --paper-light-green-a400: #76ff03;
+      --paper-light-green-a700: #64dd17;
+
+      --paper-lime-50: #f9fbe7;
+      --paper-lime-100: #f0f4c3;
+      --paper-lime-200: #e6ee9c;
+      --paper-lime-300: #dce775;
+      --paper-lime-400: #d4e157;
+      --paper-lime-500: #cddc39;
+      --paper-lime-600: #c0ca33;
+      --paper-lime-700: #afb42b;
+      --paper-lime-800: #9e9d24;
+      --paper-lime-900: #827717;
+      --paper-lime-a100: #f4ff81;
+      --paper-lime-a200: #eeff41;
+      --paper-lime-a400: #c6ff00;
+      --paper-lime-a700: #aeea00;
+
+      --paper-yellow-50: #fffde7;
+      --paper-yellow-100: #fff9c4;
+      --paper-yellow-200: #fff59d;
+      --paper-yellow-300: #fff176;
+      --paper-yellow-400: #ffee58;
+      --paper-yellow-500: #ffeb3b;
+      --paper-yellow-600: #fdd835;
+      --paper-yellow-700: #fbc02d;
+      --paper-yellow-800: #f9a825;
+      --paper-yellow-900: #f57f17;
+      --paper-yellow-a100: #ffff8d;
+      --paper-yellow-a200: #ffff00;
+      --paper-yellow-a400: #ffea00;
+      --paper-yellow-a700: #ffd600;
+
+      --paper-amber-50: #fff8e1;
+      --paper-amber-100: #ffecb3;
+      --paper-amber-200: #ffe082;
+      --paper-amber-300: #ffd54f;
+      --paper-amber-400: #ffca28;
+      --paper-amber-500: #ffc107;
+      --paper-amber-600: #ffb300;
+      --paper-amber-700: #ffa000;
+      --paper-amber-800: #ff8f00;
+      --paper-amber-900: #ff6f00;
+      --paper-amber-a100: #ffe57f;
+      --paper-amber-a200: #ffd740;
+      --paper-amber-a400: #ffc400;
+      --paper-amber-a700: #ffab00;
+
+      --paper-orange-50: #fff3e0;
+      --paper-orange-100: #ffe0b2;
+      --paper-orange-200: #ffcc80;
+      --paper-orange-300: #ffb74d;
+      --paper-orange-400: #ffa726;
+      --paper-orange-500: #ff9800;
+      --paper-orange-600: #fb8c00;
+      --paper-orange-700: #f57c00;
+      --paper-orange-800: #ef6c00;
+      --paper-orange-900: #e65100;
+      --paper-orange-a100: #ffd180;
+      --paper-orange-a200: #ffab40;
+      --paper-orange-a400: #ff9100;
+      --paper-orange-a700: #ff6500;
+
+      --paper-deep-orange-50: #fbe9e7;
+      --paper-deep-orange-100: #ffccbc;
+      --paper-deep-orange-200: #ffab91;
+      --paper-deep-orange-300: #ff8a65;
+      --paper-deep-orange-400: #ff7043;
+      --paper-deep-orange-500: #ff5722;
+      --paper-deep-orange-600: #f4511e;
+      --paper-deep-orange-700: #e64a19;
+      --paper-deep-orange-800: #d84315;
+      --paper-deep-orange-900: #bf360c;
+      --paper-deep-orange-a100: #ff9e80;
+      --paper-deep-orange-a200: #ff6e40;
+      --paper-deep-orange-a400: #ff3d00;
+      --paper-deep-orange-a700: #dd2c00;
+
+      --paper-brown-50: #efebe9;
+      --paper-brown-100: #d7ccc8;
+      --paper-brown-200: #bcaaa4;
+      --paper-brown-300: #a1887f;
+      --paper-brown-400: #8d6e63;
+      --paper-brown-500: #795548;
+      --paper-brown-600: #6d4c41;
+      --paper-brown-700: #5d4037;
+      --paper-brown-800: #4e342e;
+      --paper-brown-900: #3e2723;
+
+      --paper-grey-50: #fafafa;
+      --paper-grey-100: #f5f5f5;
+      --paper-grey-200: #eeeeee;
+      --paper-grey-300: #e0e0e0;
+      --paper-grey-400: #bdbdbd;
+      --paper-grey-500: #9e9e9e;
+      --paper-grey-600: #757575;
+      --paper-grey-700: #616161;
+      --paper-grey-800: #424242;
+      --paper-grey-900: #212121;
+
+      --paper-blue-grey-50: #eceff1;
+      --paper-blue-grey-100: #cfd8dc;
+      --paper-blue-grey-200: #b0bec5;
+      --paper-blue-grey-300: #90a4ae;
+      --paper-blue-grey-400: #78909c;
+      --paper-blue-grey-500: #607d8b;
+      --paper-blue-grey-600: #546e7a;
+      --paper-blue-grey-700: #455a64;
+      --paper-blue-grey-800: #37474f;
+      --paper-blue-grey-900: #263238;
+
+      
+      --dark-divider-opacity: 0.12;
+      --dark-disabled-opacity: 0.38; 
+      --dark-secondary-opacity: 0.54;
+      --dark-primary-opacity: 0.87;
+
+      
+      --light-divider-opacity: 0.12;
+      --light-disabled-opacity: 0.3; 
+      --light-secondary-opacity: 0.7;
+      --light-primary-opacity: 1.0;
+}
+
+</style>
+</custom-style><custom-style>
+  <style is="custom-style">html {
+  --primary-text-color: var(--light-theme-text-color);
+      --primary-background-color: var(--light-theme-background-color);
+      --secondary-text-color: var(--light-theme-secondary-color);
+      --disabled-text-color: var(--light-theme-disabled-color);
+      --divider-color: var(--light-theme-divider-color);
+      --error-color: var(--paper-deep-orange-a700);
+
+      
+      --primary-color: var(--paper-indigo-500);
+      --light-primary-color: var(--paper-indigo-100);
+      --dark-primary-color: var(--paper-indigo-700);
+
+      --accent-color: var(--paper-pink-a200);
+      --light-accent-color: var(--paper-pink-a100);
+      --dark-accent-color: var(--paper-pink-a400);
+
+
+      
+      --light-theme-background-color: #ffffff;
+      --light-theme-base-color: #000000;
+      --light-theme-text-color: var(--paper-grey-900);
+      --light-theme-secondary-color: #737373;  
+      --light-theme-disabled-color: #9b9b9b;  
+      --light-theme-divider-color: #dbdbdb;
+
+      
+      --dark-theme-background-color: var(--paper-grey-900);
+      --dark-theme-base-color: #ffffff;
+      --dark-theme-text-color: #ffffff;
+      --dark-theme-secondary-color: #bcbcbc;  
+      --dark-theme-disabled-color: #646464;  
+      --dark-theme-divider-color: #3c3c3c;
+
+      
+      --text-primary-color: var(--dark-theme-text-color);
+      --default-primary-color: var(--primary-color);
+}
+
+</style>
+</custom-style><script async="" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/lazy.min.js"></script><script src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/loader.js"></script>
+<script src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/iframe_api"></script>
+<script src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/vendor-45d462772c30000424907184f70c7157e95fb6227698d1671c5051818a6f60d8.js"></script>
+<script src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/application-c1d6407ae884c2ba7af60707f6b53ba64f8aaf4733ff9abc74285f5fbfe6d59d.js"></script>
+</head>
+<body class="focuses focuses-show lab-show l-full no-nav">
+<div class="header-container light-theme">
+<div class="header">
+<a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect header__button header__button--nav header__nav-panel-button js-nav-toggle" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">menu</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<div class="header__title">
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button header__button--nav" href="https://google.qwiklabs.com/quests/23?locale=en" data-upgraded=",MaterialButton,MaterialRipple"><ql-icon>arrow_back</ql-icon><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+
+<h1 class="headline-5">
+A Tour of Qwiklabs and Google Cloud
+</h1>
+</div>
+<div class="header__actions">
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button header__button--action header__button--search js-header-search-bar-button" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">search</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-favorite-button favorite-button" id="CatalogItem-2794-favorite-button" data-type="CatalogItem" data-id="2794" data-name="A Tour of Qwiklabs and Google Cloud" href="https://google.qwiklabs.com/favorite.json?item_id=2794&amp;item_type=CatalogItem" data-upgraded=",MaterialButton,MaterialRipple" tabindex="0"><i class="material-icons">favorite_border</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a><div class="mdl-tooltip js-tooltip" for="CatalogItem-2794-favorite-button" data-upgraded=",MaterialTooltip">
+Add to favorites
+</div>
+
+<ql-icon-button id="control-panel-target" style="display: none;">
+dashboard
+</ql-icon-button>
+<ql-menu for="#control-panel-target" id="control-panel-menu" style="left: -1000px; top: -1000px; opacity: 0;"></ql-menu>
+
+<ql-help context="lab" productdata="{&quot;userId&quot;:3563468}" data-analytics-action="opened_help" data-analytics-label="lab"></ql-help>
+<a class="header-my-account-button mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-my-account-button" data-upgraded=",MaterialButton,MaterialRipple">
+<img class="avatar " alt="avatar image" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/900b08cbdfcb29724044ed87e38922e1.png">
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<div class="header-my-account-menu js-my-account-menu">
+<div class="card elevation-2 no-padding">
+<div class="my-account-menu__top">
+<img class="avatar " alt="avatar image" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/900b08cbdfcb29724044ed87e38922e1.png">
+<div class="my-account-menu__info">
+<h4 class="subtitle-headline-1">
+Claudiu Gombos
+</h4>
+<p class="body-2 text--gray">
+<span>claudiu.gombos@globant.com</span>
+</p>
+<a class="button" href="https://google.qwiklabs.com/my_account/profile">My Account</a>
+</div>
+</div>
+<div class="my-account-menu__bottom">
+<a class="text--green subtitle-headline-2" href="https://google.qwiklabs.com/my_account/credits">241 Credits
+</a><a data-analytics-action="clicked_sign_out" class="button button--hairline" rel="nofollow" data-method="delete" href="https://google.qwiklabs.com/users/sign_out">Sign Out</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="header__search-bar js-header-search-bar">
+<form class="js-search-form-mobile" onsubmit="ql.searchFilter(); return false;" action="https://google.qwiklabs.com/searches/elasticsearch" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="C7sNVHA6L52jCDA8QTBV3RRBuw7ENgTOUJoO3/bMPpUxPr1P/Ygo5vxnKPLCLqcGvNegA/djmGbgRgruiZCe2w==">
+<input type="text" name="keywords" id="keywords" placeholder="Search" maxlength="255" aria-label="catalog search bar">
+</form>
+
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">close</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+</div>
+</div>
+
+<nav class="nav-bar">
+<a class="nav-bar__item js-navigation-button" href="https://google.qwiklabs.com/"><ql-icon class="nav-bar__item__icon">
+home
+</ql-icon>
+<span class="nav-bar__item__label">
+Home
+</span>
+</a>
+<a class="nav-bar__item js-navigation-button  active" aria-current="page" href="https://google.qwiklabs.com/catalog"><ql-icon class="nav-bar__item__icon">
+school
+</ql-icon>
+<span class="nav-bar__item__label">
+Catalog
+</span>
+</a>
+<a class="nav-bar__item js-navigation-button" href="https://google.qwiklabs.com/my_learning"><ql-icon class="nav-bar__item__icon">
+event_note
+</ql-icon>
+<span class="nav-bar__item__label">
+My Learning
+</span>
+</a>
+</nav>
+
+<nav class="nav-panel js-nav-panel">
+<div class="nav-panel__logo">
+<div class="custom-logo"><img src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/GoogleCloudTraining.svg"></div>
+</div>
+<a title="Home" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://google.qwiklabs.com/"><ql-icon class="nav-panel__item__icon">
+home
+</ql-icon>
+<div class="nav-panel__item__label">
+Home
+</div>
+</a>
+<a title="Catalog" tabindex="-1" class="nav-panel__item js-navigation-button active" aria-current="page" href="https://google.qwiklabs.com/catalog"><ql-icon class="nav-panel__item__icon">
+school
+</ql-icon>
+<div class="nav-panel__item__label">
+Catalog
+</div>
+</a>
+<a title="My Learning" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://google.qwiklabs.com/my_learning"><ql-icon class="nav-panel__item__icon">
+event_note
+</ql-icon>
+<div class="nav-panel__item__label">
+My Learning
+</div>
+</a>
+<div class="nav-panel__spacer"></div>
+<a title="Profile" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://google.qwiklabs.com/my_account/profile"><ql-icon class="nav-panel__item__icon">
+account_circle
+</ql-icon>
+<div class="nav-panel__item__label">
+Profile
+</div>
+</a>
+<a title="Credits &amp; Subscriptions" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://google.qwiklabs.com/my_account/credits"><ql-icon class="nav-panel__item__icon">
+money
+</ql-icon>
+<div class="nav-panel__item__label">
+Credits &amp; Subscriptions
+</div>
+</a>
+<a title="Security" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://google.qwiklabs.com/my_account/security"><ql-icon class="nav-panel__item__icon">
+security
+</ql-icon>
+<div class="nav-panel__item__label">
+Security
+</div>
+</a>
+<div class="nav-panel__spacer"></div>
+<a class="nav-panel__item" tabindex="-1" href="https://google.qwiklabs.com/focuses/2794?parent=catalog#"><ql-help>
+<div class="nav-panel__help-item">
+<ql-icon class="nav-panel__item__icon">help</ql-icon>
+<div class="nav-panel__item__label">Help</div>
+</div>
+</ql-help>
+</a><div class="nav-panel__small-links">
+<a tabindex="-1" href="https://google.qwiklabs.com/privacy_policy">Privacy</a>
+<a tabindex="-1" href="https://google.qwiklabs.com/terms_of_service">Terms</a>
+</div>
+</nav>
+<div class="nav-panel__overlay js-nav-toggle"></div>
+
+<main class="js-main">
+<span class="hidden" id="flash-sibling-before"></span>
+
+<div class="l-main-wrapper" id="main-wrapper">
+
+
+
+
+
+
+
+<ql-drawer-container class="js-lab-state" data-analytics-payload="{&quot;label&quot;:&quot;A Tour of Qwiklabs and Google Cloud&quot;,&quot;lab_name&quot;:&quot;A Tour of Qwiklabs and Google Cloud&quot;,&quot;classroom_name&quot;:null,&quot;deployment&quot;:&quot;google-run&quot;}" data-focus-id="2794" data-lab-billing-limit="0.0" data-lab-duration="2700" data-parent="catalog" data-recaptcha-enabled="" id="lab-container">
+<ql-drawer id="terminal-drawer" slot="drawer" style="width: 715px;">
+<ql-cloud-terminal class="terminal"></ql-cloud-terminal>
+</ql-drawer>
+<ql-drawer-content class="js-lab-wrapper" id="lab-content" slot="drawer-content">
+<ql-drawer-container id="lab-content-container">
+<ql-drawer id="control-panel-drawer" open="" slot="drawer" width="320" style="width: 320px;">
+<ql-lab-control-panel class="control-panel js-lab-control-panel" connectionfiles="[]" labcontrolbutton="{&quot;disabled&quot;:false,&quot;pending&quot;:false,&quot;running&quot;:false}" labdetails="[]" labtimer="{&quot;ticking&quot;:false,&quot;secondsRemaining&quot;:2700}" studentresources="[]">
+<script src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/api.js"></script>
+        <script>
+          // Define function so that we can call it again later if we need to reset it
+          // This executes reCAPTCHA and then calls our callback.
+          function executeRecaptchaForStartLab() {
+            grecaptcha.ready(function() {
+              grecaptcha.execute('6LeVI8IUAAAAAJNdox5eTkYrw9SbvhZ1TFyv3iHr', {action: 'start_lab'}).then(function(token) {
+                setInputWithRecaptchaResponseTokenForStartLab('g-recaptcha-response-data-start-lab', token)
+              });
+            });
+          };
+          // Invoke immediately
+          executeRecaptchaForStartLab()
+
+          // Async variant so you can await this function from another async function (no need for
+          // an explicit callback function then!)
+          // Returns a Promise that resolves with the response token.
+          async function executeRecaptchaForStartLabAsync() {
+            return new Promise((resolve, reject) => {
+              grecaptcha.ready(async function() {
+                resolve(await grecaptcha.execute('6LeVI8IUAAAAAJNdox5eTkYrw9SbvhZ1TFyv3iHr', {action: 'start_lab'}))
+              });
+            })
+          };
+
+                    var setInputWithRecaptchaResponseTokenForStartLab = function(id, token) {
+            var element = document.getElementById(id);
+            element.value = token;
+          }
+
+        </script>
+<input type="hidden" name="g-recaptcha-response-data[start_lab]" id="g-recaptcha-response-data-start-lab" data-sitekey="6LeVI8IUAAAAAJNdox5eTkYrw9SbvhZ1TFyv3iHr" class="g-recaptcha g-recaptcha-response " style="" value="03AGdBq24myCfBbbLImOIULsmU9LZmttmfxirVKBpiDrxyOu6qD-yaAfSvaPbiFc2z9mw530b5eZNWCjUXyPej7dDZt0naPll3hH12TzPOgwFj64eJEQyegFRJMfM2OHJnv9Cx3Mn6V6iZMvREJ7gJEWect1hGbtRDnooKDEN1Lhr2o8vInWkL2DS5vNJCGJHD1UFHJ_u0eqElQz4u9eWcOTSkfTK58c6ZuzUtMRWJC73YxcGvSQ_Plp3dro5ZyQt_HlOdDVD1CkHaKuflbOZQfBtu1Ey7NIaTDM5RK6zeQb0F0-15FRe4gEhFK1z3WpoJKsVnceGEF1W5CkVvnCwaQg2Mi-5c_TglQA3oGR_XY5fLWoGyRAIk1ouQKzRjxXMKhtbBQtwr1VK4J3BnDieAcdRv0jYalAi8DFumLW0xlXTBo4-k0hwQMpJeOQY9F9eCZPwp-IcFpZ3JQUd30Uj3ZD8fpiqGMuCVFA"><div style="width: 304px; height: 78px;"><div><iframe src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/anchor.html" width="304" height="78" role="presentation" name="a-rgfppv63hk3p" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></input>
+
+<div class="hidden" id="recaptcha-v2-start-lab" slot="recaptcha">
+<script src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/api(1).js" async="" defer=""></script>
+<div data-sitekey="6LeOI8IUAAAAAPkHlMAE9NReCD_1WD81iYlBlCnV" data-callback="recaptchaComplete" data-expired-callback="expireV2Token" class="g-recaptcha "><div style="width: 304px; height: 78px;"><div><iframe src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/anchor(1).html" width="304" height="78" role="presentation" name="a-8z87m4d02ro0" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response-1" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/saved_resource(2).html"></iframe></div>
+          <noscript>
+            <div>
+              <div style="width: 302px; height: 422px; position: relative;">
+                <div style="width: 302px; height: 422px; position: absolute;">
+                  <iframe
+                    src="https://www.recaptcha.net/recaptcha/api/fallback?k=6LeOI8IUAAAAAPkHlMAE9NReCD_1WD81iYlBlCnV"
+                    name="ReCAPTCHA"
+                    style="width: 302px; height: 422px; border-style: none; border: 0; overflow: hidden;">
+                  </iframe>
+                </div>
+              </div>
+              <div style="width: 300px; height: 60px; border-style: none;
+                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                  class="g-recaptcha-response"
+                  style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                  margin: 10px 25px; padding: 0px; resize: none;">
+                </textarea>
+              </div>
+            </div>
+          </noscript>
+
+</div>
+</ql-lab-control-panel>
+</ql-drawer>
+<ql-drawer-content id="lab-instructions" slot="drawer-content">
+<div class="alert alert--fake js-alert">
+<p class="alert__message js-alert-message"></p>
+<a class="alert__close js-alert-close">
+<i class="fa fa-times"></i>
+</a>
+<iframe class="l-ie-iframe-fix" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/saved_resource(3).html"></iframe>
+</div>
+<div class="js-lab-content lab-content__renderable-instructions">
+<div class="lab-preamble">
+<h1 class="lab-preamble__title">
+A Tour of Qwiklabs and Google Cloud
+</h1>
+<div class="lab-preamble__details subtitle-headline-1">
+<span>45 minutes</span>
+<span>Free</span>
+<div class="lab__rating">
+<a href="https://google.qwiklabs.com/focuses/2794/reviews?parent=catalog"><div class="rateit" data-rateit-readonly="true" data-rateit-value="4.5361"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 72.5776px;"></div><div class="rateit-hover" style="height:16px"></div></div></div>
+
+</a><a data-target="#lab-review-modal" data-toggle="modal">
+Rate Lab
+</a>
+</div>
+</div>
+</div>
+
+<div class="js-markdown-instructions markdown-lab-instructions" id="markdown-lab-instructions">
+
+
+
+<h2 id="step1">GSP282</h2>
+<p><img alt="Google Cloud Self-Paced Labs" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/GMOHykaqmlTHiqEeQXTySaMXYPHeIvaqa2qHEzw6Occ="></p>
+
+<h2 id="step2">Overview</h2>
+<p><a href="https://cloud.google.com/" target="_blank">Google Cloud</a> is a suite of cloud services hosted on Google's infrastructure. From computing and storage, to data analytics, machine learning, and networking, Google Cloud offers a wide variety of services and APIs that can be integrated with any cloud-computing application or project—be it personal or enterprise-grade.</p>
+<p>In this introductory-level lab, you will take your first steps with Google Cloud by getting hands-on practice with the <a href="https://cloud.google.com/cloud-console/" target="_blank">Cloud Console</a>—an in-browser UI that lets you access and manage Google Cloud services. You will identify key features of Google Cloud and also learn the ins and outs of the Qwiklabs environment. If you are new to cloud computing or looking for an overview of Google Cloud and Qwiklabs, you are in the right place. Read on to learn about the specifics of this lab and areas that you will get hands-on practice with.</p>
+<h3>What you will learn</h3>
+<p>In this lab, you will do the following:</p>
+<ul>
+<li>
+<p>Learn about the Qwiklabs platform and identify key features of a lab environment.</p>
+</li>
+<li>
+<p>Learn about (and possibly purchase) Qwiklabs credits and launch an instance of a lab.</p>
+</li>
+<li>
+<p>Learn how to access the Cloud Console with specific credentials.</p>
+</li>
+<li>
+<p>Learn about Google Cloud projects and identify common misconceptions that surround them.</p>
+</li>
+<li>
+<p>Learn how to use the Google Cloud <strong>Navigation menu</strong> to identify types of Google Cloud services.</p>
+</li>
+<li>
+<p>Learn about primitive roles and use the Cloud IAM service to inspect actions available to specific users.</p>
+</li>
+<li>
+<p>Learn about Cloud Shell and run commands that use the <code>gcloud</code> toolkit.</p>
+</li>
+<li>
+<p>Learn about the API library and examine its chief features.</p>
+</li>
+<li>
+<p>Use tools that are pre-installed in Cloud Shell and run commands like <code>touch</code>, <code>nano</code>, and <code>cat</code> to create, edit, and output the content of files.</p>
+</li>
+</ul>
+<h3>Prerequisites</h3>
+<p>This is an <strong>introductory level</strong> lab and the first lab you should take if you're unfamiliar with Google Cloud or Qwiklabs. If you are already experienced with Qwiklabs and the Cloud Console, check out the following labs (if you decide to take one, make sure you <strong>end your lab now</strong>):</p>
+<ul>
+<li><a href="https://google.qwiklabs.com/catalog_lab/320" target="_blank">Getting Started with Cloud Shell and gcloud</a></li>
+<li><a href="https://google.qwiklabs.com/catalog_lab/1427" target="_blank">Creating a Virtual Machine</a></li>
+</ul>
+<p>Once you're ready, scroll down to get your lab set up.</p>
+<h2 id="step3">Qwiklabs Fundamentals</h2>
+<h3>Features and components</h3>
+<p>Regardless of topic or expertise level, all Qwiklabs share a common interface. This lab that you're taking should look quite similar to the following:</p>
+<p><img alt="f7551948fe0a5b1d.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/cCCEY7+1KTma5a34x9LaYR3059SOcraUvbOduRPtitk="></p>
+<ql-infobox>
+<b>Note</b>: You are not taking the "Creating a Virtual Machine" lab shown above, it is used merely as an example to highlight common features across Qwiklabs.
+</ql-infobox>
+<p>Read the following lab component definitions and then locate them in the top-right corner of the interface.</p>
+<h4>Start Lab (button)</h4>
+<p>Clicking this will create a temporary Google Cloud environment with all the necessary services and credentials enabled so you can dive in and get hands-on practice with the lab's material. Once clicked, you will start a countdown timer that gives you a set amount of time to complete the lab's steps. Once the timer hits <code>00:00:00</code>, your lab environment and temporary credentials will be deleted.</p>
+<h4>Credit</h4>
+<p>The price of a lab. 1 Credit is <em>usually</em> equivalent to 1 US dollar (the more credits you purchase, the bigger the discount you receive.) Introductory level labs (like this one) cost 1 credit, fundamental level cost 5, advanced 7, and expert cost 9 credits. The more specialized labs cost more because they involve heavier computing tasks and demand more Google Cloud resources.</p>
+<h4>Time</h4>
+<p>Specifies the amount of time you have to complete a lab. As mentioned earlier, once you click the "Start Lab" button the timer will count down until it reaches <code>00:00:00</code>. When it does, your temporary Google Cloud environment and resources will be deleted. Ample time is given to complete a lab, but make sure you don't work on something else while a lab is running—you risk losing all of your hard work!</p>
+<h4>Score</h4>
+<p>Most, but not all labs include a score. This feature is called "activity tracking" and ensures you complete specified steps in a lab. To pass a lab with activity tracking, you need to complete all the steps <em>in order</em> (only then will you receive completion credit.)</p>
+<h3>Purchasing Credits</h3>
+<p>If you haven't already, click on the <strong>Start Lab</strong> button now. If you have an "Access Code" (a coupon that covers the cost of a single lab regardless of expertise level) or have already purchased credits, you can skip down to the next section "Starting a Lab". Otherwise, click <strong>BUY CREDITS</strong>. This will take you to a new page that offers different credit packages:</p>
+<p><img alt="687cb3c84f0e3616.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/sPRfzNrQgWMkrS4whMrVL10LX7yti7CDNF1U7cjxFDU="></p>
+<p>Enter in the amount of credits you want to buy and click <strong>Pay with Credit Card</strong>. This will take you to a secure panel, prompting you to enter in your credit card information:</p>
+<p><img alt="dece71c4ac29dcf6.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/pYmkOWJFlXfNo1dSUCzUUaAS12K_rlHO+euhNs3tweM="></p>
+<p>Enter in your credit card information and click <strong>Pay</strong>. You're all set to take this and any other Qwiklabs! You can always buy more credits by clicking on the profile icon in the top right corner and selecting "Buy Credits". You will also be prompted to purchase more if you run out and try to start a new lab.</p>
+<h3>Starting a Lab</h3>
+<p>Now that we understand the key features and components of a lab, click on the <strong>Start Lab</strong> button in the top-right corner. If you have an Access Code, enter it in now and click <strong>Launch with an Access code</strong>. Otherwise, click <strong>Launch with 1 Credit</strong>:</p>
+<p><img alt="e89b47fb2c0d0cf4.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/Rnn2qmTMgAkLK4BI3y+DT_TDBj7izBDD0xD+NO6bdxo="></p>
+<p>It may take a moment for the Google Cloud environment and credentials to spin up—please be patient. Once the timer in the top right corner starts ticking and the <strong>Start Lab</strong> button turns into a red <strong>End Lab</strong> button, everything is in place and you're all set to log in to the Cloud Console.</p>
+<p>Make sure that you do not click the <strong>End Lab</strong> button until you have completed all the tasks required of you. Once clicked, your temporary credentials will be invalidated and you will no longer be able to access the work you've done throughout the lab. Only when you reach the end and have made sure that you've completed all the necessary steps, click the <strong>End Lab</strong> button. You must click this button when you finish—if you do not, you won't be able to take another lab afterwards (Qwiklabs has protections in place that prevent concurrent enrollment.)</p>
+<h3>Test your understanding</h3>
+<p>Answer the following multiple choice questions to reinforce your understanding of the concepts we've covered so far.</p>
+<p><ql-multiple-choice-probe answerindex="0" optiontitles="[
+&quot;Start lab (button)&quot;,
+&quot;Credit&quot;,
+&quot;Time&quot;,
+&quot;Score&quot;
+]" shuffle="" stem="This builds a temporary environment in Google Cloud." labinstanceid="19585701">
+</ql-multiple-choice-probe></p>
+<p><ql-multiple-choice-probe answerindex="0" optiontitles="[
+&quot;True&quot;,
+&quot;False&quot;
+]" shuffle="" stem="Once the timer reaches 00:00:00, you will lose access to your temporary Google Cloud environment." labinstanceid="19585701">
+</ql-multiple-choice-probe></p>
+<p><ql-multiple-choice-probe answerindex="0" optiontitles="[
+&quot;True&quot;,
+&quot;False&quot;
+]" shuffle="" stem="Some labs have tracking, which scores your completion of hands-on lab activities." labinstanceid="19585701">
+</ql-multiple-choice-probe></p>
+<p><ql-multiple-choice-probe answerindex="0" optiontitles="[
+&quot;True&quot;,
+&quot;False&quot;
+]" shuffle="" stem="In order to receive completion credit for a lab that has tracking, you must complete the required hands-on lab activities." labinstanceid="19585701">
+</ql-multiple-choice-probe></p>
+<h2 id="step4">Accessing the Cloud Console</h2>
+<h3>Key Terms</h3>
+<p>Now that your lab instance is up and running, take a look at the left panel. It should be populated with an Open Google Console button and Username, Password, and Project ID fields.</p>
+<p><img alt="credentials.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/Y36TAn6ljVjIJjG1NdsKBDr5NpZQcpewYBDkFXx8Kic="></p>
+<ql-infobox>
+<b>Note</b>: Your credentials will resemble, but not match the above—every lab instance generates new temporary credentials.
+</ql-infobox>
+<p>Before we go any further, let's examine each of these components.</p>
+<h4>Open Google Console</h4>
+<p>This is a button that takes you to the <a href="https://cloud.google.com/cloud-console/" target="_blank">Cloud Console</a>—the web console and central development hub for Google Cloud. As you start working in Google Cloud, you will be doing the majority of your work from this interface. All of the Google Cloud Qwiklabs use the Cloud Console in some form or another.</p>
+<h4>Project ID</h4>
+<p>A <a href="https://cloud.google.com/docs/overview/#projects" target="_blank">Google Cloud Project</a> is an organizing entity for your Google Cloud resources. It often times contains resources and services—for example, it may hold a pool of virtual machines, a set of databases, and a network that connects them with one another. Projects also contain settings and permissions, which specify security rules and who has access to what resources.</p>
+<p>A <em>Project ID</em> is a unique identifier that is used to link Google Cloud resources and APIs to your specific project. Project IDs are unique across Google Cloud, meaning that there can only be one <strong>qwiklabs-gcp-xxx....</strong>, which makes it globally identifiable.</p>
+<h4>Username and Password</h4>
+<p>These are credentials representing an identity in the Cloud Identity and Access Management (Cloud IAM) service that has access permissions (a role or roles), which allow you to work with Google Cloud resources in the project you've been allocated. These credentials are <em>temporary</em>, and will only work for the access time of the lab. This means that once the timer hits 0, you will no longer be able to access your Google Cloud project with those credentials.</p>
+<h3>Signing in to Google Cloud</h3>
+<p>Now that you have a better understanding of the Connection Details panel, let's use the details it contains to sign in to the Cloud Console. Click on the <strong>Open Google Console</strong> button. This will open the Google Cloud sign in page in a new browser tab.</p>
+<p>You should now be on a page that resembles the following:</p>
+<p><img alt="132360d35fb145c3.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/zET9RtU1aN7f3FhNhhUNe7+PbBtgwz4fTUO3E86m8m0="></p>
+<p>If you've ever signed in to a Google application like Gmail, this page should look familiar. To sign in to the Cloud Console, copy the <strong>Username</strong> from the Connection Details and paste it in to the "Email or phone" field and hit enter.</p>
+<p><em>Wait! Make sure that you used the googlexxxxxx_student@qwiklabs.net email to sign in, NOT your personal or company email address!</em></p>
+<p>Go back and copy the <strong>Password</strong> from the provisioned credentials on the Qwiklabs lab page and paste it in to the Google Cloud sign in "Password" field and hit enter.</p>
+<ql-infobox>The username that resembles googlexxxxxx_student@qwiklabs.net is a Google account that has been created for your use as a Qwiklabs student. It has a specific domain name, which is "qwiklabs.net", and has been assigned IAM roles that allow you to access the Google Cloud Project that you have been provisioned.</ql-infobox>
+<p>If you successfully logged in, your page should resemble the following:</p>
+<p><img alt="1101641cf530979c.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/2Q23GxuZHTzyQM_w2eQjsLXMNRyLGpEC_d5ZxPjn48c="></p>
+<p>Go ahead and click <strong>Accept</strong> to indicate your acknowledgement of Google's terms of service and privacy policy. You will then be brought to a "Protect your account" page. Since this is a temporary account, don't worry about updating recovery phone numbers or emails. Click <strong>Done</strong>.</p>
+<p>You will now be brought to the "Updates to Terms of Service" page—for email updates regarding future announcements check the <strong>No</strong> box. Check the <strong>Yes</strong> box to agree to the Google Cloud's terms of service.</p>
+<p>And just like that, you've successfully accessed the Cloud Console with your Qwiklabs credentials! Your page should now resemble the following:</p>
+<p><img alt="35a55968748df7c0.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/vPsOw690IZhUlPPxZk3asDaXQBRVZRiyr+6nBXCqEf4="></p>
+<h3>Test your understanding</h3>
+<p>Answer the following multiple choice questions to reinforce your understanding of the concepts we've covered so far.</p>
+<p><ql-multiple-choice-probe answerindex="3" optiontitles="[
+&quot;Open Google Console&quot;,
+&quot;Password&quot;,
+&quot;Project ID&quot;,
+&quot;System admin&quot;
+]" shuffle="" stem="What field is NOT found in the left panel?" labinstanceid="19585701">
+</ql-multiple-choice-probe></p>
+<p><ql-multiple-choice-probe answerindex="0" optiontitles="[
+&quot;True&quot;,
+&quot;False&quot;
+]" shuffle="" stem="The username in the left panel, which resembles googlexxxxxx_student@qwiklabs.net is a Cloud IAM identity." labinstanceid="19585701">
+</ql-multiple-choice-probe></p>
+<p>Now that we're signed in to our Cloud Console and understand the basics of our credentials, let's learn a little bit more about Google Cloud projects.</p>
+<h2 id="step5">Projects in the Cloud Console</h2>
+<p>We touched on Google Cloud projects earlier when we examined the components of the "Connection Details" panel. Here's the definition once again:</p>
+<p><em>A <a href="https://cloud.google.com/docs/overview/#projects" target="_blank">Google Cloud Project</a> is an organizing entity for your Google Cloud resources. It often times contains resources and services—for example, it may hold a pool of virtual machines, a set of databases, and a network that connects them with one another. Projects also contain settings and permissions, which specify security rules and who has access to what resources.</em></p>
+<p>If you look in the top-left side of the console, you will see a panel called <strong>Project info</strong> which should resemble the following:</p>
+<p><img alt="76370a4185212435.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/kaHKc2t7OyP7YUPOj4Eqw0nuUXQvt0iUypsuaeqkzKw="></p>
+<p>As you see, your project has a <strong>name</strong>, <strong>ID</strong>, and <strong>number</strong>. These identifiers are frequently used when interacting with Google Cloud services. You are working out of one project so you can get practice with a specific service or feature of Google Cloud.</p>
+<p>You probably haven't noticed it, but you actually have access to more than one Google Cloud project. In fact, in some labs you may be provisioned more than one project to accomplish the tasks assigned. If you click on the drop-down menu with your project name and select <strong>ALL</strong>, you will see that there is a "Qwiklabs Resources" project visible as well:</p>
+<p><img alt="66c73e22ea578f78.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/1hqteUty9xHbSdnkgtI4ZrrHDAG8pHWKAEUUjNzLk2M="></p>
+<ql-infobox><strong>Do not switch over to the Qwiklabs Resources Project at this point!</strong> However, you may use it later in other labs.</ql-infobox>
+<p>It's not uncommon for large enterprises or experienced users of Google Cloud to have dozens to thousands of Google Cloud projects. Organizations use Google Cloud in different ways, so projects are a good way to separate cloud-computing services (by team or product for example.)</p>
+<p>"Qwiklabs Resources" is a project that contains files, datasets, and machine images for certain labs and can be accessed from every Google Cloud lab environment. It's important to note that "Qwiklabs Resources" is shared (read only) with all Qwiklabs users, meaning you won't be able to delete or modify it.</p>
+<p>The Google Cloud project that you are working out of and whose name resembles <code>qwiklabs-gcp-xxx...</code> is <em>temporary</em>, meaning the project and everything it contains will be deleted once the lab ends. Whenever you start a new lab, you will be given access to one or more new Google Cloud project(s), and there (not "Qwiklabs Resources") is where you will run all of the lab steps.</p>
+<h3>Test your understanding</h3>
+<p>Answer the following multiple choice questions to reinforce your understanding of the concepts we've covered so far.</p>
+<p><ql-multiple-choice-probe answerindex="0" optiontitles="[
+&quot;Google Cloud Project&quot;,
+&quot;Cloud Storage bucket&quot;,
+&quot;Username&quot;,
+&quot;Password&quot;
+]" shuffle="" stem="An organizing entity for anything you build with Google Cloud." labinstanceid="19585701">
+</ql-multiple-choice-probe></p>
+<p><ql-multiple-choice-probe answerindex="0" optiontitles="[
+&quot;True&quot;,
+&quot;False&quot;
+]" shuffle="" stem="Qwiklabs Resources is shared (read only) with all Qwiklabs users, meaning you won&#39;t be able to delete or modify it." labinstanceid="19585701">
+</ql-multiple-choice-probe></p>
+<p><ql-multiple-choice-probe answerindex="1" optiontitles="[
+&quot;True&quot;,
+&quot;False&quot;
+]" shuffle="" stem="Qwiklabs Resources is the project where you run all of your lab steps." labinstanceid="19585701">
+</ql-multiple-choice-probe></p>
+<h2 id="step6">Navigation Menu and Services</h2>
+<p>In the top-left corner, you will notice a three-line icon that resembles the following:</p>
+<p><img alt="818684f8e0d0a523.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/jNaEVX1xXeOOasukmY+9mcktmn9gjkwgNAJEkBlIYbI="></p>
+<p>Clicking on this will reveal (or hide) a <strong>Navigation menu</strong> that points to Google Cloud's core services. If the menu isn't exposed, click on the icon now and scroll through to see the types of services offered:</p>
+<p><img alt="5012e407e81c6d07.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/gk6CVCz3LGXvViYQ_ZUp+u1VqI0DBrDAZh7kToRN20Q="></p>
+<p>The <strong>Navigation menu</strong> is an important component of the Cloud Console—it offers quick access to the platform's services and also outlines its offerings. If you scroll through the menu, you will see that there are seven categories of Google Cloud services:</p>
+<ul>
+<li>
+<strong>Compute</strong>: houses a variety of machine types that support any type of workload. The different computing options let you decide how involved you want to be with operational details and infrastructure amongst other things.</li>
+<li>
+<strong>Storage</strong>: data storage and database options for structured or unstructured, relational or non relational data.</li>
+<li>
+<strong>Networking</strong>: services that balance application traffic and provision security rules amongst other things.</li>
+<li>
+<strong>Cloud Operations</strong>: a suite of cross-cloud logging, monitoring, trace, and other service reliability tools.</li>
+<li>
+<strong>Tools</strong>: services for developers managing deployments and application build pipelines.</li>
+<li>
+<strong>Big Data</strong>: services that allow you to process and analyze large datasets.</li>
+<li>
+<strong>Artificial Intelligence</strong>: a suite of APIs that run specific artificial intelligence and machine learning tasks on Google Cloud.</li>
+</ul>
+<p><a href="https://cloud.google.com/docs/overview/cloud-platform-services#top_of_page" target="_blank">This link</a> will take you to documentation that covers each of these categories in more depth if you are interested.</p>
+<h2 id="step7">Roles and Permissions</h2>
+<p>Earlier we mentioned that besides cloud computing services, Google Cloud also houses a collection of permissions and roles that define who has access to what resources. We can use the <a href="https://cloud.google.com/iam/" target="_blank">Cloud Identity and Access Management (Cloud IAM)</a> service to inspect and modify such roles and permissions.</p>
+<p>If closed, open up the navigation menu. Then near the top click <strong>IAM &amp; admin</strong>. This will take you to a page that contains a list of users, which specifies permissions and roles granted to certain accounts. Try to sift through these and find the "@qwiklabs" username you signed in with:</p>
+<p><img alt="87534f555ed17b88.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/v5er+fG4yURAeD9YUOKNuDgtD9KdMi9Sg2Ph9XThkZA="></p>
+<p>You should find something similar:</p>
+<p><img alt="1d37da7a0e9ece15.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/2DMzLfj5mYLyzliG6TBp9A0PoW1PHzDXVffA_wbL+iQ="></p>
+<p>The <strong>member</strong> field is set to "google23396_student@qwiklabs.net" (which matches the username you logged in with) and the <strong>name</strong> field is set to "google23396_student@qwiklabs.net student". You will see that the <strong>Role</strong> field is set to "Editor", which is one of three <em>primitive roles</em> offered by Google Cloud. Primitive roles set project-level permissions and unless otherwise specified, they control access and management to all Google Cloud services.</p>
+<p>The following table pulls definitions from the <a href="https://cloud.google.com/iam/docs/understanding-roles/#primitive%5C_roles" target="_blank">roles documentation</a>, which gives a brief overview of viewer, editor, and owner role permissions:</p>
+<table>
+
+<tbody><tr>
+<th>Role Name</th>
+<th>Permissions</th>
+</tr>
+
+
+<tr>
+<td>roles/viewer</td>
+<td>Permissions for read-only actions that do not affect state, such as viewing (but not modifying) existing resources or data.</td>
+</tr>
+<tr>
+<td>roles/editor</td>
+<td>All viewer permissions, plus permissions for actions that modify state, such as changing existing resources.</td>
+</tr>
+<tr>
+<td>roles/owner</td>
+<td>All editor permissions and permissions for the following actions: Manage roles and permissions for a project and all resources within the project; Set up billing for a project.</td>
+</tr>
+
+</tbody></table>
+<p>So as an editor you will be able to create, modify, and delete Google Cloud resources. However, you won't be able to add or delete members from Google Cloud projects.</p>
+<h3>Test your understanding</h3>
+<p>Answer the following multiple choice questions to reinforce your understanding of the concepts we've covered so far.</p>
+<p><ql-multiple-choice-probe answerindex="0" optiontitles="[
+&quot;Navigation menu&quot;,
+&quot;Compute&quot;,
+&quot;Cloud Operations&quot;,
+&quot;Networking&quot;
+]" shuffle="" stem="Offers quick access to the platform&#39;s services and also outlines its offerings." labinstanceid="19585701">
+</ql-multiple-choice-probe></p>
+<p><ql-multiple-choice-probe answerindex="0" optiontitles="[
+&quot;True&quot;,
+&quot;False&quot;
+]" shuffle="" stem="Primitive roles set project-level permissions and unless otherwise specified, they control access and management to all Google Cloud services." labinstanceid="19585701">
+</ql-multiple-choice-probe></p>
+<p><ql-multiple-choice-probe answerindex="1" optiontitles="[
+&quot;Viewer role&quot;,
+&quot;Editor role&quot;,
+&quot;Owner role&quot;,
+&quot;Google Cloud project&quot;
+]" shuffle="" stem="Provides all viewer permissions, plus permissions for actions that modify state, such as changing existing resources." labinstanceid="19585701">
+</ql-multiple-choice-probe></p>
+<h2 id="step8">APIs and Services</h2>
+<p>Google Cloud APIs are a key part of Google Cloud. Like services, the 200+ APIs in areas that range from business administration to machine learning all easily integrate with Google Cloud projects and applications.</p>
+<p>APIs are "Application Programming Interfaces" that you can call directly or via our client libraries. Cloud APIs use resource-oriented design principles as described in our <a href="https://cloud.google.com/apis/design/" target="_blank">API Design Guide</a>.</p>
+<p>When Qwiklabs provisions a new Google Cloud project for a lab instance, it enables most APIs behind the scenes so you can work on the lab's tasks right away. Be aware that when you create your own Google Cloud projects outside of Qwiklabs, you will have to enable certain APIs yourself.</p>
+<p>Most Cloud APIs provide you with detailed information on your project’s usage of that API, including traffic levels, error rates, and even latencies, helping you to quickly triage problems with applications that use Google services. You can view this information by opening the navigation menu and clicking on <strong>APIs &amp; Services</strong> &gt; <strong>Library</strong>:</p>
+<p><img alt="apis.gif" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/IhN1xAfMsp0KrMIwX50LGtlzcsup+fK45UA1wseaaa4="></p>
+<p>If you take a look at the left-hand menu with the header "CATEGORY", you will see all the different type of categories offered. In the API search bar, type in Dialogflow and select the <strong>Dialogflow API</strong>. You should now be on the following page:</p>
+<p><img alt="dialogflow.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/TJxda7OL7Z8mAPtAWRFkf16dH2KSGWP_S0cEvzofT_w="></p>
+<p>The Dialogflow API allows you to build rich conversational applications (e.g. for Google Assistant) without having to worry about the underlying machine learning and natural language understanding schema.</p>
+<p>Now click <strong>Enable</strong>. This will take you to a new page, hit the back button in your browser and you will see that the API is now enabled:</p>
+<p><img alt="enabled.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/eTgnbsNvLaqrex7qumvUuzQEc114GwncM_V8xL4j594="></p>
+<p>Now click on <strong>Try this API</strong>. This will open a new tab that will reveal the documentation for the Dialogflow API and will specify the methods available to you. Examine some of these and close the tab when you're finished.</p>
+<p>If you're interested in learning more about APIs, please see new the new hands-on tool in Google Cloud called <a href="https://developers.google.com/apis-explorer/#p/" target="_blank">Google APIs Explorer</a>. We've also created a lab <a href="https://google.qwiklabs.com/catalog_lab/1241" target="_blank">APIs Explorer: Qwik Start</a> that will give you hands-on experience with the tool using a simple example.</p>
+<p>Open the <strong>Navigation menu</strong> and click <strong>Home</strong> to go back to main page of the Cloud Console.</p>
+<h3>Test your understanding</h3>
+<p>Answer the following multiple choice question to reinforce your understanding of the concepts we've covered so far.</p>
+<p><ql-multiple-choice-probe answerindex="1" optiontitles="[
+&quot;True&quot;,
+&quot;False&quot;
+]" shuffle="" stem="When you start a lab in Qwiklabs, you need to enable APIs in your project to start working with Google Cloud." labinstanceid="19585701">
+</ql-multiple-choice-probe></p>
+<h2 id="step9">Cloud Shell</h2>
+<p>Now that you understand the key features of Google Cloud and the Cloud Console, you will get hands-on practice with <a href="https://cloud.google.com/shell/docs/features" target="_blank">Cloud Shell</a>. Cloud Shell is an in-browser command prompt execution environment that allows you to enter commands at a terminal prompt to manage resources and services in your Google Cloud project.</p>
+<p>Cloud Shell lets you run all of your shell commands without leaving the console and comes with pre-installed command line tools.</p>
+<p>In the top-right corner of the console, click on the <strong>Activate Cloud Shell</strong> button and then click <strong>Start Cloud Shell</strong> if prompted:</p>
+<p><img alt="819af82459550c67.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/RuUJsmCzDpq4kWuMpt4yXLfoj6kH3MGYNcI0DE3ipB0="></p>
+<p>A new, black window should appear at the bottom of the console with messages and prompts that resemble the following:</p>
+<pre><code>Welcome to Cloud Shell! Type "help" to get started.
+Your Cloud Platform project in this session is set to qwiklabs-gcp-76ad0f1342e20013.
+Use "gcloud config set project [PROJECT_ID]" to change to a different project.
+gcpstaging23396_student@cloudshell:~ (qwiklabs-gcp-76ad0f1342e20013)$
+</code><button class="button button--copy js-copy-button-0"><i class="fa fa-clipboard"></i></button></pre>
+<p>You now have a Cloud Shell session up and running. Copy and paste (or type in) the following into Cloud Shell and hit enter:</p>
+<pre><code>gcloud auth list
+</code><button class="button button--copy js-copy-button-1"><i class="fa fa-clipboard"></i></button></pre>
+<p>You should receive see a similar output, where <code>ACTIVE ACCOUNT</code> is set to your Cloud IAM identity (<code>gcpstagingxxxxx_student@qwiklabs.net</code>):</p>
+<pre><code>Credentialed Accounts
+ACTIVE  ACCOUNT
+*       gcpstaging23396_student@qwiklabs.net
+To set the active account, run:
+    $ gcloud config set account `ACCOUNT`
+</code><button class="button button--copy js-copy-button-2"><i class="fa fa-clipboard"></i></button></pre>
+<p>As mentioned earlier, Cloud Shell comes preinstalled with specific command line tools. The main Google Cloud toolkit is <a href="https://cloud.google.com/sdk/gcloud/" target="_blank">gcloud</a>, which is used for many tasks on the platform, like resource management and user authentication.</p>
+<p>You just ran a <code>gcloud</code> command—<a href="https://cloud.google.com/sdk/gcloud/reference/auth/list" target="_blank">auth list</a>—which lists the credentialed account(s) in your Google Cloud project. This account name matches the Qwiklabs username you signed in to the Cloud Console with earlier.</p>
+<p>Besides pre-installed toolkits, Cloud Shell also comes with the standard unix command line interface (CLI) tools and text editors like <a href="https://www.nano-editor.org/" target="_blank">nano</a>. We can use these to create and edit files right inside Cloud Shell.</p>
+<p>Run the following <a href="http://www.linfo.org/touch.html" target="_blank">touch command</a> to create a file called <code>test.txt</code>:</p>
+<pre><code>touch test.txt
+</code><button class="button button--copy js-copy-button-3"><i class="fa fa-clipboard"></i></button></pre>
+<p><code>touch</code> won't generate any output. Run the unix command <a href="https://linuxconfig.org/learning-linux-commands-ls" target="_blank">ls</a> to list the files in our current directory:</p>
+<pre><code>ls
+</code><button class="button button--copy js-copy-button-4"><i class="fa fa-clipboard"></i></button></pre>
+<p>You should receive the following output:</p>
+<pre><code>README-cloudshell.txt  test.txt
+</code><button class="button button--copy js-copy-button-5"><i class="fa fa-clipboard"></i></button></pre>
+<p>We see our new <code>test.txt</code> file added to our working directory. Let's make some edits to it using the nano text editor that we referenced earlier. To edit a file, type in <code>nano</code> followed by the filename you want to edit in Cloud Shell:</p>
+<pre><code>nano test.txt
+</code><button class="button button--copy js-copy-button-6"><i class="fa fa-clipboard"></i></button></pre>
+<p>This will open the blank file with the Nano text editor:</p>
+<p><img alt="885a6cb5c1a2d1ab.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/xvq7XWdjSMm7k8g3pdSchB70h3IKQtgT4frc3fBWkzU="></p>
+<p>Go ahead and type in a message, like the following:</p>
+<pre><code>Google Cloud and Qwiklabs are the best!
+</code><button class="button button--copy js-copy-button-7"><i class="fa fa-clipboard"></i></button></pre>
+<p>Once you have that written in, hold the <strong>CNTRL+X</strong> keys. Then type in <strong>Y</strong> followed by the <strong>Enter key</strong> to save the file with the new message.</p>
+<p>Another helpful command is <a href="http://www.linfo.org/cat.html" target="_blank">cat</a>, which will output the contents of a file. Run the following command to make sure that our file was updated correctly:</p>
+<pre><code>cat test.txt
+</code><button class="button button--copy js-copy-button-8"><i class="fa fa-clipboard"></i></button></pre>
+<p>You should see the following output in your Cloud Shell session:</p>
+<pre><code>Google Cloud and Qwiklabs are the best!
+</code><button class="button button--copy js-copy-button-9"><i class="fa fa-clipboard"></i></button></pre>
+<p>And just like that, you were able to create, edit, and output the contents of a file all in Cloud Shell (all without having to leave your browser.)</p>
+<h2 id="step10">Ending your lab</h2>
+<p>Now that you're finished with the lab, click on the <strong>End Lab</strong> button at the top of this page.</p>
+<p><img alt="9c86408d4a5e74cd.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/tP94S9cvjMu1MDlop8AB2_+q3_nyvopT6Yri1PPsBrQ="></p>
+<p>Please rate each lab you take in Qwiklabs. Rate it <img alt="five_stars.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/LZUBJPyOLYREWQFfmfqWDA_tgxsb4hvRrg32UipHjD0="> if you were satisfied—anything less if you weren't. Leave comments about your experiences in the "Comment" window; Google always appreciates thoughtful feedback.</p>
+<p>Ending a lab will remove your access to the Google Cloud project as well as the services and work you've done in it. If you go back to the Cloud console, you will see that you've been signed out automatically. You can close that tab now.</p>
+<h2 id="step11">Congratulations!</h2>
+<p><img alt="GCP_Essentials_125x135_new.png" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/ykt8NTzPWC6+W8mAljshFqjsAPrZ8bElG7SLw4kSrtU="></p>
+<p>In just 30 minutes you developed a solid understanding of the Cloud Console and the platform's key features. You learned about projects, roles, and the types of services the platform offers. You also practiced with Cloud IAM, the APIs library, and Cloud Shell. You are now ready to take more Google Cloud labs in Qwiklabs.</p>
+<h3>Finish Your Quest</h3>
+<p>Continue your Quest with <a href="https://google.qwiklabs.com/quests/23" target="_blank">Google Cloud Essentials</a>. A Quest is a series of related labs that form a learning path. Completing this Quest earns you the badge above, to recognize your achievement. You can make your badge (or badges) public and link to them in your online resume or social media account. Enroll in this Quest and get immediate completion credit if you've taken this lab. <a href="http://google.qwiklabs.com/catalog" target="_blank">See other available Qwiklabs Quests.</a></p>
+<h3>Next Steps / Learn More</h3>
+<p>Be sure to check out the following labs for more practice with essential Google Cloud services:</p>
+<ul>
+<li><a href="https://google.qwiklabs.com/catalog_lab/1427" target="_blank">Creating a Virtual Machine</a></li>
+<li><a href="https://google.qwiklabs.com/catalog_lab/320" target="_blank">Getting Started with Cloud Shell and gcloud</a></li>
+</ul>
+<h3>Google Cloud Training &amp; Certification</h3>
+<p>...helps you make the most of Google Cloud technologies. <a href="https://cloud.google.com/training/courses" target="_blank">Our classes</a> include technical skills and best practices to help you get up to speed quickly and continue your learning journey. We offer fundamental to advanced level training, with on-demand, live, and virtual options to suit your busy schedule. <a href="https://cloud.google.com/certification/" target="_blank">Certifications</a> help you validate and prove your skill and expertise in Google Cloud technologies.</p>
+
+<h5>Manual Last Updated June 3, 2020</h5>
+<h5>Lab Last Tested July 15, 2019</h5>
+<p>Copyright 2020 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.</p>
+
+
+
+</div>
+</div>
+
+
+<div class="hidden js-end-lab-button-container lab-content__end-lab-button">
+<ql-lab-control-button class="js-end-lab-button" running=""></ql-lab-control-button>
+</div>
+<!-- / TODO: Move recommendations into the end lab modal -->
+<div class="lab-content__renderable-instructions">
+<div class="lab-content__recommendation">
+<!-- # TODO: Change classes so that this doesn't stack vertically -->
+<section class="upcoming-cards">
+<h2 class="headline-3">Continue questing</h2>
+<div class="content-card-grid">
+<div class="card-content-wrapper js-content-card" data-id="1281" data-level="Introductory" data-name="A Tour of Qwiklabs and Google Cloud" data-type="Lab">
+<a class="card card--content elevation-0 content-lab" href="https://google.qwiklabs.com/focuses/2794?parent=catalog"><div class="card__image">
+<div class="card__image__inner" style="background-image: url(https://cdn.qwiklabs.com/assets/fractal0-8ca42d5686105a4c14126a9aa4e917b00cbebee8ad55d56a66712c5dbafa0b52.jpg)"></div>
+</div>
+<div class="card__body">
+<div class="overline card--content__type">
+Hands-On Lab
+</div>
+<h3 class="card--content__title">
+A Tour of Qwiklabs and Google Cloud
+</h3>
+<p class="card--content__description body-1">
+In this first hands-on lab you will access Qwiklabs and the Google Cloud Platform Console and use the basic GCP features: Projects, Resources, IAM Users, Roles, Permissions, APIs, and Cloud Shell.
+</p>
+</div>
+<div class="card__footer">
+<div class="card__footer__left">
+<span>Introductory</span>
+</div>
+<div class="card__footer__right">
+<div class="rateit" data-rateit-readonly="true" data-rateit-value="4.5361"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 72.5776px;"></div><div class="rateit-hover" style="height:16px"></div></div></div>
+</div>
+</div>
+</a></div>
+
+</div>
+</section>
+
+</div>
+
+</div>
+</ql-drawer-content>
+<ql-drawer end="" id="outline-drawer" open="" slot="drawer" width="320" style="width: 320px;">
+<div class="js-lab-content-outline lab-content__outline">
+<a href="https://google.qwiklabs.com/focuses/2794?parent=catalog#step1" class="">GSP282</a><a href="https://google.qwiklabs.com/focuses/2794?parent=catalog#step2" class="">Overview</a><a href="https://google.qwiklabs.com/focuses/2794?parent=catalog#step3" class="">Qwiklabs Fundamentals</a><a href="https://google.qwiklabs.com/focuses/2794?parent=catalog#step4" class="">Accessing the Cloud Console</a><a href="https://google.qwiklabs.com/focuses/2794?parent=catalog#step5" class="">Projects in the Cloud Console</a><a href="https://google.qwiklabs.com/focuses/2794?parent=catalog#step6" class="">Navigation Menu and Services</a><a href="https://google.qwiklabs.com/focuses/2794?parent=catalog#step7" class="">Roles and Permissions</a><a href="https://google.qwiklabs.com/focuses/2794?parent=catalog#step8" class="is-active">APIs and Services</a><a href="https://google.qwiklabs.com/focuses/2794?parent=catalog#step9">Cloud Shell</a><a href="https://google.qwiklabs.com/focuses/2794?parent=catalog#step10">Ending your lab</a><a href="https://google.qwiklabs.com/focuses/2794?parent=catalog#step11">Congratulations!</a>
+</div>
+</ql-drawer>
+</ql-drawer-container>
+</ql-drawer-content>
+</ql-drawer-container>
+<div class="lab-introduction js-lab-introduction is-hidden">
+<div class="lab-introduction__inner">
+<h1 class="headline-1">Welcome to Your First Lab!</h1>
+<ql-icon-button class="js-skip-button">close</ql-icon-button>
+<div class="lab-introduction__video">
+<iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" id="lab-introduction" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/yF7EDXKTmoQ.html"></iframe>
+</div>
+<a class="js-skip-button button button--outline">Skip this video</a>
+</div>
+</div>
+
+
+
+</div>
+</main>
+<div class="modal fade" id="lab-details-modal">
+<div class="modal-container">
+<div class="mdl-shadow--24dp modal-content">
+<div class="modal-body">
+<p class="l-mbm">
+In this first hands-on lab you will access Qwiklabs and the Google Cloud Platform Console and use the basic GCP features: Projects, Resources, IAM Users, Roles, Permissions, APIs, and Cloud Shell.
+</p>
+<p>
+This lab is included in these quests:
+<a href="https://google.qwiklabs.com/quests/23">Google Cloud Essentials</a>, <a href="https://google.qwiklabs.com/quests/120">Getting Started: Create and Manage Cloud Resources</a>, <a href="https://google.qwiklabs.com/quests/90">Understanding Your Google Cloud Costs</a>.
+If you complete this lab you'll receive credit for it when you enroll in one of these quests.
+</p>
+<p class="small-label l-mbs">
+<strong>
+Duration:
+</strong>
+0m setup
+·
+45m access
+·
+30m completion
+</p>
+<p class="small-label l-mbs">
+<span><strong>Levels: </strong>Introductory</span>
+</p>
+<p class="small-label">
+<strong>
+Permalink:
+</strong>
+<a href="https://google.qwiklabs.com/catalog_lab/1281">https://google.qwiklabs.com/catalog_lab/1281</a>
+</p>
+</div>
+<div class="modal-actions">
+<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" data-dismiss="modal" data-upgraded=",MaterialButton,MaterialRipple">
+Got It
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+</div>
+
+
+</div>
+</div>
+<iframe class="l-ie-iframe-fix" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/saved_resource(4).html"></iframe>
+</div>
+<div class="modal fade" id="lab-review-modal">
+<div class="modal-container">
+<div class="mdl-shadow--24dp modal-content">
+<form class="simple_form js-lab-review-form" id="new_lab_review" action="https://google.qwiklabs.com/lab_reviews" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><div class="modal-body">
+<p class="label">
+How satisfied are you with this lab?*
+</p>
+<div class="rateit js-rateit" data-rateit-max="5" data-rateit-min="0" data-rateit-resetable="false" data-rateit-step="1" data-rateit-value="0"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 0px;"></div><div class="rateit-hover" style="height:16px"></div></div></div>
+<div class="l-mtm">
+
+<div class="control-group hidden lab_review_user_id"><div class="controls"><input class="hidden" type="hidden" value="3563468" name="lab_review[user_id]" id="lab_review_user_id"></div></div>
+<div class="control-group hidden lab_review_classroom_id"><div class="controls"><input class="hidden" type="hidden" name="lab_review[classroom_id]" id="lab_review_classroom_id"></div></div>
+<div class="control-group hidden lab_review_lab_id"><div class="controls"><input class="hidden" type="hidden" value="1281" name="lab_review[lab_id]" id="lab_review_lab_id"></div></div>
+<div class="control-group hidden lab_review_focus_id"><div class="controls"><input class="hidden" type="hidden" name="lab_review[focus_id]" id="lab_review_focus_id"></div></div>
+<div class="control-group hidden lab_review_rating"><div class="controls"><input class="hidden js-rating-input" type="hidden" name="lab_review[rating]" id="lab_review_rating"></div></div>
+<div class="control-group text optional lab_review_comment"><label class="text optional control-label" for="lab_review_comment">Comment</label><div class="controls"><textarea class="text optional" name="lab_review[comment]" id="lab_review_comment"></textarea></div></div>
+</div>
+</div>
+<div class="modal-actions">
+<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" data-dismiss="modal" data-upgraded=",MaterialButton,MaterialRipple">
+Cancel
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<input type="submit" name="commit" value="Submit" disabled="disabled" id="submit" data-disabled="false" class="button" data-disable-with="Submit">
+</div>
+</form>
+
+</div>
+</div>
+<iframe class="l-ie-iframe-fix" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/saved_resource(5).html"></iframe>
+</div>
+
+<script>
+  $( function() {
+    ql.initMaterialInputs();
+    initChosen();
+    initSearch();
+    initTabs();
+    ql.list.init();
+    ql.favoriting.init();
+    ql.header.myAccount.init();
+    initTooltips();
+    ql.autocomplete.init();
+    ql.modals.init();
+    ql.toggleButtons.init();
+    ql.analytics.init();
+    ql.labControlPanel.addRecaptchaErrorHandler();
+  initLabContent();
+  ql.labOutline.links.init();
+  initLabReviewModal();
+  ql.labAssessment.init();
+  ql.labIntroduction.init( true );
+  ql.labData.init();
+  initLabTranslations( {"are_you_sure":"All done? If you end this lab, you will lose all your work. You may not be able to restart the lab if there is a quota limit. Are you sure you want to end this lab?\n","in_progress":"*In Progress*","ending":"*Ending*","starting":"*Starting, please wait*","end_concurrent_labs":"Sorry, you can only run one lab at a time. To start this lab, please confirm that you want all of your existing labs to end.\n","copied":"Copied","no_resource":"Error retrieving resource.","no_support":"No Support","mac_press":"Press ⌘-C to copy","thanks_review":"Thanks for reviewing this lab.","windows_press":"Press Ctrl-C to copy","days":"days"} );
+  ql.labRun.init();
+  ql.initHeader();
+  ql.navigation.init();
+  ql.navPanel.init();
+  ql.navigation.init();
+  
+  });
+</script>
+<style>
+  .mdl-layout__container {
+    position: static
+  }
+</style>
+
+
+<iframe data-product="web_widget" title="No content" tabindex="-1" aria-hidden="true" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/saved_resource(6).html" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe><div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/anchor(2).html" width="256" height="60" role="presentation" name="a-a7yzk9vsrwqc" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div><div><iframe title="Opens a widget where you can chat to one of our agents" id="launcher" tabindex="0" style="width: 109px; height: 50px; padding: 0px; margin: 10px 20px; position: fixed; bottom: 0px; overflow: visible; opacity: 1; border: 0px; z-index: 999998; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; right: 0px;" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/saved_resource(7).html"></iframe><iframe title="Find more information here" id="webWidget" tabindex="-1" style="width: 374px; max-height: calc(100vh - 32px); height: 572px; position: fixed; opacity: 0; border: 0px; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; top: -9999px; visibility: hidden; z-index: 999999;" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/saved_resource(8).html"></iframe></div><div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge" src="./A Tour of Qwiklabs and Google Cloud _ Qwiklabs_files/bframe.html" name="c-8z87m4d02ro0" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div></div></body></html>

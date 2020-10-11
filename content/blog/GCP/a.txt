@@ -1,0 +1,23 @@
+
+
+
+https://sites.google.com/globant.com/trainings/cloud-computing/gcp?pli=1&authuser=2
+
+gcloud compute project-info describe --project <your_project_ID>
+
+compute-default-region
+
+google-compute-default-zone
+
+student-03-cf6c225b5833@qwiklabs.net
+L4sd3n5jqtH
+project ID qwiklabs-gcp-03-bd6e11a86e6f
+
+vm name = gcelab2
+
+//_____________--------------------------------
+
+
+student-04-28173dcfd8ed@qwiklabs.net
+F72bZwcF
+qwiklabs-gcp-04-f745e27c4ad1
