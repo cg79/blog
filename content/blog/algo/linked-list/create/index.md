@@ -18,7 +18,7 @@ class Node {
 
 function createLinkedList(arr) {
 	var head  = new Node();
-	head.val = 1;
+	head.val = arr[0];
 	head.next = null;
 
 	var curentNode = head;
