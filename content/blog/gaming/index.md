@@ -13,55 +13,17 @@ import Counter from "$components/Counter";
 
 Showcasing how MDX for Gatsby.js works ... The Counter component is imported explicitly, but since we are using MDXProvider, we can also define global components which don't need to be imported (e.g. Link, YouTube).
 
-## A React component in Markdown (imported component):
 
-<Counter initialCounter={3} />
+2 D animation software
 
-## Code Snippet
-
-```jsx{1,4-6}
-import React from 'react';
-
-const Counter = initialCounter => {
-  const [counter, setCounter] = React.useState(initialCounter);
-
-  const onIncrement = () => {
-    setCounter(c => c + 1);
-  };
-
-  const onIncrement = () => {
-    setCounter(c => c - 1);
-  };
-
-  return (
-    <div>
-      {counter}
-
-      <div>
-        <button onClick={onIncrement} type="button">
-          Increment
-        </button>
-        <button onClick={onDecrement} type="button">
-          Decrement
-        </button>
-      </div>
-    </div>
-  );
-};
-
-export default Counter;
-```
-
-## An external Link:
-
-<Link to="https://roadtoreact.com/">Find out more about it</Link>
-
-## An Image:
-
-![Some Cover Image](./images/banner.jpg)
-
-
-
-
-
-That's it.
+1. FlipBook
+2. pencil 2D
+3. powtoon
+4. toonBoom
+5. Synfig Studio
+6. moho Pro
+7. After Effects
+8. CRAZY TALK ANIMATOR
+9. cel action 2d
+10. spriter pro\
+11. enve
