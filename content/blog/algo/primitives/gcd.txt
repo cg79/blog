@@ -1,0 +1,10 @@
+function gcd(x, y) {
+  debugger;
+  while(y) {
+    [x,y] = [y,x%y]
+    //var t = y;
+    //y = x % y;
+    //x = t;
+  }
+  return x;
+}
