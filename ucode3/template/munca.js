@@ -1,6 +1,8 @@
 // += operator
 debugger;
 
+
+var x = 9;
 function add(x) {
     return x + 1;
 }

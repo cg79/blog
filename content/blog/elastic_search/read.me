@@ -1,0 +1,50 @@
+https://www.sitepoint.com/search-engine-node-elasticsearch/
+
+
+http://localhost:3001/api/private
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNsYXVkaXU5Mzc5QHlhaG9vLmNvbSIsIl9pZCI6IjVkOWIxM2E3OTFjMjE4NTE5OGZlNmIwMSIsIm5pY2siOiI0NCIsImlhdCI6MTU3MDcwNzUwMn0.LPBefUrBBd610r44CBSOeKNy_0A6Eb_i2aH7Ua78YqE
+
+
+//search exactly by name 
+{
+	"data": {
+        "index": "userservices",
+        "criteria": { "name": "aaa" }
+      },
+      "proxy": {
+        "module": "search",
+        "method": "search"
+      }
+     }
+
+
+//add index
+ {
+	"data": {
+        "index": "userservices",
+        "body": {
+        	"name": "tra la la",
+        	"test": "information for test"
+        }
+      },
+      "proxy": {
+        "module": "search",
+        "method": "elasticadd"
+      }
+     }
+
+
+//get all
+{
+  "data": {
+        "index": "userservices",
+        "query": {
+          "match_all": {}
+      }
+    },
+      "proxy": {
+        "module": "search",
+        "method": "search"
+      }
+     }

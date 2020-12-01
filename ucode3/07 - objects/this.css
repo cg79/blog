@@ -1,0 +1,29 @@
+
+
+.flex{
+    display: flex;
+}
+
+.flexdc {
+    flex-direction: column;
+}
+
+.orizontalcenter{
+    justify-content: center;
+}
+
+.flexgrow1 {
+    flex-grow: 1;
+}
+
+.flexbox1 {
+    flex: 0 0 33.333333%;
+}
+.verticalcenter{
+    align-content: center;
+}
+
+.flexwrap{
+    flex-wrap: wrap;
+}
+

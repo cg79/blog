@@ -70,6 +70,8 @@ hint: use split and after that filter and after that reverse and after that join
 
 17. having an array of arrays, calculate the sum of all numbers; ex: [[1,2,3],[4],[5,6,7,8],[9,10]] ==> 55
 
+18. You have an array with the numbers from 0 to n AND an input index;
+Create another array with the numbers from index-> n and 0->index
 //https://www.freecodecamp.org/news/reduce-f47a7da511a9/ for a little bit later
 
 

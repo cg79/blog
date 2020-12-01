@@ -1,0 +1,208 @@
+<html>
+  <head>
+    <script src="this.js"></script>
+    <link rel="stylesheet" href="this.css" />
+    <link rel="stylesheet" href="this_autoptimize.css" />
+  </head>
+
+  <body>
+    <div class="flex">
+      <div class="flex flexbox1">1</div>
+      <div class="flex flexbox1h3 flexdc flexwrap">
+        <div class="entry-content"><p><strong>Summary</strong>: in this tutorial, you will&nbsp; learn about the JavaScript <code>this</code> value and understand it clearly in various contexts.</p><p>If you have been working with other programming languages such as C++, Java, and PHP, you’re already familiar with the <code>this</code> keyword.</p><p>In these languages, the&nbsp;<code>this </code>keyword represents the instance of the current object in the method of the class. And the <code>this</code> keyword is only relevant within a method of the class, meaning that you cannot use it outside of a method.</p><p>JavaScript has the&nbsp;<code>this</code> keyword that behaves differently from other programming languages, which may confuse you at first.</p><p>In JavaScript, you can use the&nbsp;<code>this</code> keyword in the <a href="https://www.javascripttutorial.net/javascript-execution-context/">global and function contexts</a>. Moreover, the behavior of the &nbsp;<code>this</code> keyword changes between strict and non-strict mode.</p><h2>What is the <code>this</code> keyword</h2><p>The <code>this</code> references the object of which the function is a property. In other words, the <code>this</code> references the object that is currently calling the function.</p><p>Suppose that you have an object called <code>counter</code>. This object <code>counter</code> has a method called <code>next()</code>.</p><p>When you call the <code>next()</code> method, you can access the <code>this</code> object.</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-keyword">const</span> counter = {
+		<span class="hljs-attr">count</span>: <span class="hljs-number">0</span>,
+		<span class="hljs-attr">next</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">return</span> ++<span class="hljs-keyword">this</span>.count;
+		}
+	};
+	
+	counter.next();</code></div></pre><p>Inside the <code>next()</code> function, the <code>this</code> references the <code>counter</code> object.</p><p>See the following method call:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-css"><span class="hljs-selector-tag">counter</span><span class="hljs-selector-class">.next</span>();</code></div></pre><p>The <code>next()</code> is a function which is the property of the <code>counter</code> object. Therefore, inside the <code>next()</code> function, the <code>this</code> references the <code>counter</code> object.</p><p>By the way, when a function is a property of an object, it is called a method.</p><h2>Global context</h2><p>In the global context, the <code>this</code> references the <a href="https://www.javascripttutorial.net/es-next/javascript-globalthis/">global object</a>, which is the <code>window</code> object on the web browser or <code>global</code> object on Node.js.</p><p>This behavior is consistent whether the strict mode is applied or not, like this:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span> === <span class="hljs-built_in">window</span>); <span class="hljs-comment">// true</span></code></div></pre><p>If you assign a property to <code>this</code> object in the global context, JavaScript will add the property to the global object as shown in the following example:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-keyword">this</span>.color= <span class="hljs-string">'Red'</span>;
+	<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">window</span>.color); <span class="hljs-comment">// 'Red'</span></code></div></pre><h2>Function context</h2><p>In JavaScript, you can invoke a <a href="http://www.javascripttutorial.net/javascript-function/">function</a> in the following ways:</p><ul><li><a href="#function_invocation">Function invocation</a></li><li><a href="#method_invocation">Method invocation</a></li><li><a href="#constructor_invocation">Constructor invocation</a></li><li><a href="#indirect_invocation">Indirect invocation</a></li></ul><p>Each function invocation defines its own context, therefore, the <code>this</code> behaves differently than you may expect.</p><h3 id="function_invocation">1) Simple function invocation</h3><p>In the non-strict mode, the <code>this</code> references the global object when the function is called as follows:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">show</span>(<span class="hljs-params"></span>) </span>{
+	   <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span> === <span class="hljs-built_in">window</span>); <span class="hljs-comment">// true</span>
+	}
+	
+	show();</code></div></pre><p>When you call the <code>show()</code> function, the <code>this</code> references the <a href="https://www.javascripttutorial.net/es-next/javascript-globalthis/">global object</a>, which is the <code>window</code> on the web browser and <code>global</code> on Node.js.</p><p>Calling the <code>show()</code> function is the same as:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-built_in">window</span>.show();</code></div></pre><p>In the strict mode, JavaScript sets the <code>this</code> to <code>undefined</code>. Consider the following example:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-meta">"use strict"</span>;
+	
+	<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">show</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span> === <span class="hljs-literal">undefined</span>);
+	}
+	
+	show();</code></div></pre><p>To set the strict mode, you can use the directive <code>"use strict"</code> at the beginning of the file.</p><p>If you want to apply the strict mode to a specific function only, you place it at the top of the function body.</p><p>Note that the strict mode has been available since ECMAScript 5.1. The <code>strict</code> mode applies to both function and inner functions within the function. Here is an example:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">show</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-string">"use strict"</span>;
+		<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span> === <span class="hljs-literal">undefined</span>); <span class="hljs-comment">// true</span>
+	
+		<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">display</span>(<span class="hljs-params"></span>) </span>{
+			<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span> === <span class="hljs-literal">undefined</span>); <span class="hljs-comment">// true</span>
+		}
+		bar();
+	}
+	
+	foo();</code></div></pre><p>Output:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-literal">true</span>
+	<span class="hljs-literal">true</span></code></div></pre><p>In the <code>display()</code> inner function, The <code>this</code> also set to <code>undefined</code> as shown in the console.</p><h3 id="method_invocation">2) Method invocation</h3><p>When you call a method of an object, JavaScript sets <code>this</code> to the object that owns the method. See the following <code>car</code> object:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-keyword">let</span> car = {
+		<span class="hljs-attr">brand</span>: <span class="hljs-string">'Honda'</span>,
+		<span class="hljs-attr">getBrand</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.brand;
+		}
+	}
+	
+	<span class="hljs-built_in">console</span>.log(car.getBrand()); <span class="hljs-comment">// Honda</span></code></div></pre><p>In this example, the <code>this</code> object in the <code>getBrand()</code> method references the <code>car</code> object.</p><p>Since a method is a property of an object which is a value, you can store it in a variable.</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-keyword">let</span> brand = car.getBrand;</code></div></pre><p>And then call the method via the variable</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-built_in">console</span>.log(brand()); <span class="hljs-comment">// undefined</span></code></div></pre><p>You get <code>undefined</code> instead of <code>"Honda"</code> because when you call a method without specifying its object, JavaScript sets <code>this</code> to the global object in non-strict mode and <code>undefined</code> in the strict mode.</p><p>To fix this issue, you use the <code><a href="https://www.javascripttutorial.net/javascript-bind/">bind()</a></code> method of the <code>Function.prototype</code> object. The <code>bind()</code> method creates a new function whose the <code>this</code> keyword is set to a specified value.</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-keyword">let</span> brand = car.getBrand.bind(car);
+	<span class="hljs-built_in">console</span>.log(brand()); <span class="hljs-comment">// Honda</span>
+	</code></div></pre><p>In this example, when you call the <code>brand()</code> method, the <code>this</code> keyword is bound to the <code>car</code> object. For example:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-keyword">let</span> car = {
+		<span class="hljs-attr">brand</span>: <span class="hljs-string">'Honda'</span>,
+		<span class="hljs-attr">getBrand</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.brand;
+		}
+	}
+	
+	<span class="hljs-keyword">let</span> bike = {
+		<span class="hljs-attr">brand</span>: <span class="hljs-string">'Harley Davidson'</span>
+	}
+	
+	<span class="hljs-keyword">let</span> brand = car.getBrand.bind(bike);
+	<span class="hljs-built_in">console</span>.log(brand());</code></div></pre><p>Output:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs">Harley Davidson</code></div></pre><p>In this example, the <code>bind()</code> method sets the <code>this</code> to the <code>bike</code> object, therefore, you see the value of the <code>brand</code> property of the <code>bike</code> object on the console.</p><h3 id="constructor_invocation">3) Constructor invocation</h3><p>When you use the <code>new</code> keyword to create an instance of a function object, you use the function as a constructor.</p><p>The following example declares a <code>Car</code> function, then invokes it as a constructor:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Car</span>(<span class="hljs-params">brand</span>) </span>{
+		<span class="hljs-keyword">this</span>.brand = brand;
+	}
+	
+	Car.prototype.getBrand = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.brand;
+	}
+	
+	<span class="hljs-keyword">var</span> car = <span class="hljs-keyword">new</span> Car(<span class="hljs-string">'Honda'</span>);
+	<span class="hljs-built_in">console</span>.log(car.getBrand());</code></div></pre><p>The expression <code>new Car('Honda')</code> is a constructor invocation of the <code>Car</code> function.</p><p>JavaScript creates a new object and sets <code>this</code> to the newly created object. This pattern works great with only one potential problem.</p><p>Now, you can invoke the <code>Car()</code> as a function or as a constructor. If you omit the <code>new</code> keyword as follows:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-keyword">var</span> bmw = Car(<span class="hljs-string">'BMW'</span>);
+	<span class="hljs-built_in">console</span>.log(bmw.brand);
+	<span class="hljs-comment">// =&gt; TypeError: Cannot read property 'brand' of undefined</span></code></div></pre><p>Since the <code>this</code> value in the <code>Car()</code> sets to the global object, the <code>bmw.brand</code> returns <code>undefined</code>.</p><p>To make sure that the <code>Car()</code> function is always invoked using constructor invocation, you add a check at the beginning of the <code>Car()</code> function as follows:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Car</span>(<span class="hljs-params">brand</span>) </span>{
+		<span class="hljs-keyword">if</span> (!(<span class="hljs-keyword">this</span> <span class="hljs-keyword">instanceof</span> Car)) {
+			<span class="hljs-keyword">throw</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'Must use the new operator to call the function'</span>);
+		}
+		<span class="hljs-keyword">this</span>.brand = brand;
+	}</code></div></pre><p>ES6 introduced a meta-property named <a href="http://www.javascripttutorial.net/es6/javascript-new-target/"><code>new.target</code></a> that allows you to detect whether a function is invoked as a simple invocation or as a constructor.</p><p>You can modify the <code>Car()</code> function that uses the <code>new.target</code> metaproperty as follows:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Car</span>(<span class="hljs-params">brand</span>) </span>{
+		<span class="hljs-keyword">if</span> (!<span class="hljs-keyword">new</span>.target) {
+			<span class="hljs-keyword">throw</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'Must use the new operator to call the function'</span>);
+		}
+		<span class="hljs-keyword">this</span>.brand = brand;
+	}</code></div></pre><h3 id="indirect_invocation">4) Indirect Invocation</h3><p>In JavaScript, <a href="https://www.javascripttutorial.net/javascript-functions-are-first-class-citizens/">functions are first-class citizens</a>. In other words, functions are objects, which are instances of the <a href="http://www.javascripttutorial.net/javascript-function-type/">Function type</a>.</p><p>The <code>Function</code> type has two methods: <code><a href="https://www.javascripttutorial.net/javascript-call/">call()</a></code> and <code><a href="https://www.javascripttutorial.net/javascript-apply-method/">apply()</a></code> . These methods allow you to set the <code>this</code> value when calling a function. For example:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getBrand</span>(<span class="hljs-params">prefix</span>) </span>{
+		<span class="hljs-built_in">console</span>.log(prefix + <span class="hljs-keyword">this</span>.brand);
+	}
+	
+	<span class="hljs-keyword">let</span> honda = {
+		<span class="hljs-attr">brand</span>: <span class="hljs-string">'Honda'</span>
+	};
+	<span class="hljs-keyword">let</span> audi = {
+		<span class="hljs-attr">brand</span>: <span class="hljs-string">'Audi'</span>
+	};
+	
+	getBrand.call(honda, <span class="hljs-string">"It's a "</span>);
+	getBrand.call(audi, <span class="hljs-string">"It's an "</span>);</code></div></pre><p>Output:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-php">It<span class="hljs-string">'s a Honda
+	It'</span>s an Audi</code></div></pre><p>In this example, we called the <code>getBrand()</code> function indirectly using the <code>call()</code> method of the <code>getBrand</code> function. We passed <code>honda</code> and &nbsp;<code>audi</code> object as the first argument of the <code>call()</code> method, therefore, we got the corresponding brand in each call.</p><p>The <code>apply()</code> method is similar to the <code>call()</code> method except that its second argument is an array of arguments.</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript">getBrand.apply(honda, [<span class="hljs-string">"It's a "</span>]); <span class="hljs-comment">// "It's a Honda"</span>
+	getBrand.apply(audi, [<span class="hljs-string">"It's an "</span>]); <span class="hljs-comment">// "It's a Audi"</span></code></div></pre><h2>Arrow functions</h2><p><a href="http://www.javascripttutorial.net/es6/">ES6 </a>introduced a new concept named <a href="http://www.javascripttutorial.net/es6/javascript-arrow-function/">arrow function</a>. In arrow functions, JavaScript sets the <code>this</code> lexically.</p><p>It means the arrow function does not create its own <a href="https://www.javascripttutorial.net/javascript-execution-context/">execution context</a>, but inherits the <code>this</code>&nbsp;from the outer function where the arrow function is defined. See the following example:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-keyword">let</span> getThis = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>;
+	<span class="hljs-built_in">console</span>.log(getThis() === <span class="hljs-built_in">window</span>); <span class="hljs-comment">// true</span></code></div></pre><p>In this example, the <code>this</code> value is set to the global object i.e., <code>window</code> in the web browser.</p><p>Since an arrow function does not create its own execution context, defining a method using an arrow function will cause an issue. For example:</p><pre class="wp-block-code"><div class="code-badge-pre"><div class="code-badge">
+			<div title="Copy to clipboard">
+				<i class="icon-docs code-badge-copy-icon"></i>
+			</div>
+		 </div><code class="hljs language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Car</span>(<span class="hljs-params"></span>) </span>{
+		<span class="hljs-keyword">this</span>.speed = <span class="hljs-number">120</span>;
+	}
+	
+	Car.prototype.getSpeed = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.speed;
+	}
+	
+	<span class="hljs-keyword">var</span> car = <span class="hljs-keyword">new</span> Car();
+	car.getSpeed(); <span class="hljs-comment">// TypeError</span></code></div></pre><p>Inside the <code>getSpeed()</code> method, the <code>this</code> value reference the global object, not the <code>Car</code> object. Therefore the <code>car.getSpeed()</code> invocation causes an error because the global object does not have the <code>speed</code> property.</p><p>In this tutorial, you have learned how JavaScript <code>this</code> behaves in different contexts.</p><div class="helpful-block-content wth-theme-thumbs" data-title=""><ul><li><span class="wth-title">Was this tutorial helpful ?</span></li><li><a data-post="834" data-post-url="https://www.javascripttutorial.net/javascript-this/" data-post-title="Demystifying the JavaScript this Keyword" data-response="1" href="#" class="wth-green-btn icon-thumbsup icon1-thumbs-up4">Yes</a><a data-response="0" data-post="834" data-post-url="https://www.javascripttutorial.net/javascript-this/" data-post-title="Demystifying the JavaScript this Keyword" href="#" class="wth-red-btn icon-thumbsdown icon1-thumbs-down4">No</a></li></ul></div></div>
+      </div>
+      <div class="flex flexbox1">3</div>
+    </div>
+  </body>
+</html>

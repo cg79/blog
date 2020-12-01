@@ -1,0 +1,27 @@
+
+//get all indices
+http://134.209.233.57:9200/_cat/indices
+
+
+//get documents from index
+http://134.209.233.57:9200/dd/_search
+
+
+{
+"data": {
+        "search": "car",
+        "index": "userservices",
+  		"body": {
+				"title" : "carmangeria secarului care a ca curent acar" 
+  			}
+      },
+      "proxy": {
+        "module": "elasticsearch",
+        "method": "elasticadd",
+        "info": {
+          "collection": "userservices"
+        }
+      }
+    
+}
+

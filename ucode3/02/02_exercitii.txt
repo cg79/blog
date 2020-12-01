@@ -4,12 +4,12 @@
 4. WAF with 2 params, input (string), x(number), WR the same string with the character from position x as uppercase;
 5. WAF, (string 1, string 2), WR the indexof string 2 within string 1;
 6. WAF, (string 1, string 2), WR the last indexof string 2 within string 1;
-7. WAF, (string) , WR the first 2 characters
+7. WAF, (string) , WR the first 2characters
 8. WAF, (string), WR the characters from position 1 and -1 (previous character from last one)
 9. WAF, (string, start, end), WR the characters between (start and end)
 10. WAF (string1, string2), to replace the string2 within string1;
 11. WAF(string), WR true if the length is even. (%2 === 0)
-12. WAF(string1, s2), WR the sum of lengths of s1 and s2;
+12. WAF(string1, s2), WR the sumof lengths of s1 and s2;
 13. WAF(string1, s2), WR true if s1 starts with s2;
 14.WAF(string, number) to remove the character from position number using slice
 15.WAF (string, string) WR the number of aparition of string 2 whithin string1.
