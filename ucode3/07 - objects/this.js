@@ -1,3 +1,39 @@
+
+
+function car0 () {
+  this.counter =0;
+  return function() {
+        this.counter ++;
+         return this.counter;
+    }
+}
+
+var x = new car0();
+x() --> this = window;
+
+//okkkkkk
+function car1 () {
+  this.counter =5;
+  return () => {
+        this.counter ++;
+         return this.counter;
+    }
+}
+//------------------------------
+
+//okkkkk
+function car2 () {
+  var counter = 10;
+  function fff() {
+        counter ++;
+         return counter;
+    }
+   return fff;
+}
+
+
+
+
 function Car() {
     this.speed = 120;
 }
