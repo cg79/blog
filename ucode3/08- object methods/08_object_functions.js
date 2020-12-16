@@ -8,7 +8,7 @@ https://www.algoexpert.io/ - de site-ul asta va spuneam eu
 
 
 
-NOTA: la curs am zis ca destructing e aceeasi treaba cu spread. e total fals si nu stiu cum de am spus asta.
+
 
 
 destructing: initializarea unor variabile dintr-un object.
