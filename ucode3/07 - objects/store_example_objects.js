@@ -1,4 +1,7 @@
 
+
+
+
 // 2. Please write a system for a store. 
 // The store have n shelf.
 // every shelf can have the following settings

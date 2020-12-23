@@ -1,0 +1,7 @@
+1. WAF WR 6 random numbers out of 49
+ hint: create an array of objects {number: i, code: random string}. for random string use guid. (take a look over javascript guid function). sort the array by code and take first 6
+
+2. simulate a 6/49 game. you have the winning 6 numbers and n tickets. return the tickets which has 1 winning number, 2 , .... 6
+hint: you can use :
+winningTickets = {};
+winningTickets[1] = []; ... winningTickets[6] = [];
