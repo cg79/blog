@@ -1,0 +1,11 @@
+D:\Claudiu\Work\_toptal\C#_Algorithms\Toptal\WindowsFormsApplicationTest\bin\Debug\WindowsFormsApplicationTest.exe.config
+D:\Claudiu\Work\_toptal\C#_Algorithms\Toptal\WindowsFormsApplicationTest\obj\Debug\WindowsFormsApplicationTest.csprojResolveAssemblyReference.cache
+D:\Claudiu\Work\_toptal\C#_Algorithms\Toptal\WindowsFormsApplicationTest\obj\Debug\WindowsFormsApplicationTest.Form1.resources
+D:\Claudiu\Work\_toptal\C#_Algorithms\Toptal\WindowsFormsApplicationTest\obj\Debug\WindowsFormsApplicationTest.Properties.Resources.resources
+D:\Claudiu\Work\_toptal\C#_Algorithms\Toptal\WindowsFormsApplicationTest\obj\Debug\WindowsFormsApplicationTest.csproj.GenerateResource.Cache
+D:\Claudiu\Work\_toptal\C#_Algorithms\Toptal\WindowsFormsApplicationTest\bin\Debug\WindowsFormsApplicationTest.exe
+D:\Claudiu\Work\_toptal\C#_Algorithms\Toptal\WindowsFormsApplicationTest\bin\Debug\WindowsFormsApplicationTest.pdb
+D:\Claudiu\Work\_toptal\C#_Algorithms\Toptal\WindowsFormsApplicationTest\bin\Debug\Toptal.exe
+D:\Claudiu\Work\_toptal\C#_Algorithms\Toptal\WindowsFormsApplicationTest\bin\Debug\Toptal.pdb
+D:\Claudiu\Work\_toptal\C#_Algorithms\Toptal\WindowsFormsApplicationTest\obj\Debug\WindowsFormsApplicationTest.exe
+D:\Claudiu\Work\_toptal\C#_Algorithms\Toptal\WindowsFormsApplicationTest\obj\Debug\WindowsFormsApplicationTest.pdb

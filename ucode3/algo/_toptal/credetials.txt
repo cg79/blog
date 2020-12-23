@@ -1,0 +1,61 @@
+git:
+tamash_ionut@hotmail.com
+toptal123
+
+trello:
+https://trello.com/b/XHq4ExZ1/ahe-version-1-5
+Tamash_ionut@hotmail.com
+toptal123
+
+https://docs.google.com/spreadsheets/d/1RMvYxlEV_KuG5o3lgIl9O4yfQcM5INaS4KpUN_NPeIo
+
+https://theahe.slack.com/messages/@jsb/
+
+theahe.io
+
+//-------------------------------------------------
+source tree
+tamas_ionut
+tamash_ionut@hotmail.com
+//-------------------------------------------------
+
+https://bitbucket.org/jsbahe/ahe
+https://github.com/ionuttamas/ahe.git
+
+demo@theahe.com
+demoahe
+sau demo2@theahe.com
+aceeasi parola
+
+
+Gidar Emanuel
+cristian.gidar@gmail.com
+
+
+pai daca esti pe branch-ul feature/x
+si vrei sa faci rebase peste development
+dai
+git rebase development
+atat
+si apoi daca ii gata (efectiv vrei integrare)
+te duci pe development branch
+si faci git rebase feature/x
+
+
+
+Steps to deploy:
+1. Local deploy din VS => sa generate un folder si faceti zip din el
+2. Filezilla
+Host:  50.28.79.144
+Username:  Administrator
+Password:  04Subaru
+copiati zipu in inetpub/theahe.io
+3 conectati-va cu RDP
+dezarhivati zipu => inlocuiti toate fisierele din theahe.io in afara de ultimele 2 Web.config
+atat
+(daca puteti da copy/paste din RDP, atunci nu mai trebe filezilla)
+
+
+
+nontes;
+RWX_Listings.Reason

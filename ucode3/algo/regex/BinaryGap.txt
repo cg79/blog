@@ -1,0 +1,36 @@
+
+function solution(N) {
+    // write your code in JavaScript (Node.js 8.9.4)
+    var str = base2(N);
+    const arr = base2asArray(str);
+    // console.log(arr);
+    //var max = createmaxArray(arr);
+    var re = /(1(0{1,})1)/g;
+    var regArrays = arr.match(re);
+    if(!regArrays) {
+        return 0;
+    }
+    //console.log(regArrays);
+    var y = regArrays.map(function(t) { return t.length-2 });
+    return Math.max.apply(null, y);
+}
+
+function base2(n) {
+    return n.toString(2);
+}
+
+function base2asArray(str) {
+    var arr =  str.split("");
+    var result = [];
+    var x =0;
+    for(var i=0;i<arr.length;i++) {
+        x = parseInt(arr[i]);
+        result.push(arr[i]);
+        if( x== 1) {
+            result.push('1');
+        }
+    }
+    
+    return result.join("");
+    
+}

@@ -1,0 +1,27 @@
+
+let messages = [];
+let interval = (nr) => setInterval(() => {
+//debugger;
+messages.push(new Date().toString()); 
+checkMessagesLength(nr)
+},5000);
+let intervalId = 0; 
+
+function lastnMessagesinList(n) {
+	if(intervalId) {
+		clearInterval(intervalId);
+	}
+	intervalId = interval(n);
+	
+
+}
+
+function checkMessagesLength(n) {
+	if(messages.length>n) {
+	//debugger;
+		messages.shift();
+		console.clear();
+		console.log(messages);
+	}	
+
+}

@@ -1,0 +1,5 @@
+\*(.*?)\*    - comments
+
+//(.*?)\r?\n  -line comments
+
+https://stackoverflow.com/questions/3524317/regex-to-strip-line-comments-from-c-sharp

@@ -1,0 +1,32 @@
+
+function maxCons(arr) {
+	debugger;
+	if(!arr.length) {
+		return {start: 0, lung:0};
+	}
+	var arr1 = [1];
+	for(var i=1;i< arr.length;i++) {
+		if(arr[i] == arr[i-1] +1) {
+			arr1[i] = arr1[i-1] +1;
+		} else {
+			arr1[i] = 1;
+		}
+	}
+
+	var max = Math.max(...arr1);
+	var index = arr1.indexOf(max);
+	return {
+		lung: max+2,
+		start: index - max - 1 
+	} 
+}
+
+function prison(n,m, arr1, arr2) {
+	var sparturaH =   maxCons(arr1);
+	var sparturaV =   maxCons(arr2);
+
+
+
+}
+
+prison(4,5,[3,4],[1])

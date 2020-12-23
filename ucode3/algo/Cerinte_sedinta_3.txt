@@ -1,0 +1,47 @@
+1.Sa se creeze un obiect magazin doar cu proprietatea nume folosind function constructor
+https://codeburst.io/various-ways-to-create-javascript-object-9563c6887a47
+
+
+2. sa se modifice  obiectul cu inca o functie care sa returneze numele magazinului
+
+3. sa se creeze o clasa raft  folosind class vezi "Create JavaScript Object using ES6 classes"
+raful va avea o lista de produse si un numar de identificare. 1,2, 3, etc 
+(aceasta clasa va fii folosita la magazine)
+
+4. magazinul sa fie decorat cu o functie adaugareRaft(value)
+
+5. sa se serializeze magazinul ca si string. JSON.stringify se foloseste
+
+6. sa se creeze o noua instanta de magazin folosind stringul de mai sus. Se foloseste JSON.parse(string);
+
+7. sa se adauge la obiectul magazin o proprietate owner . aceasta sa fie privata.  exemplu de mai jos e la fel. se vede ca secretName nu e vizibil inafara daca verificam o instanta
+
+function Vehicle(name, maker) {
+   this.name = name;
+   this.maker = maker;
+
+   let secretName = '';
+
+   
+   this.changeSecretName = function(newName) {
+     debugger;
+     secretName = newName;
+	}
+
+   this.getSecretName = function() {
+	   return secretName;
+    }
+}
+
+
+8. obiectul raft va avea o functie adugareProdus
+9. stergereProdus
+10. sortareProdus
+11. getTotalPrice (suma preturilor de pe fiecare produs). se foloseste reduce
+12. magazinul va avea deasemenea getTotalPrice 
+13. raftul va avea o metoda editProduct(newProduct). HINT: se cauta produsul in lista se i se modifica proprietatile. se foloseste find
+14. raftul va avea o metoda replaceProduct(oldProduct, newProduct). HINT: se cauta produsul in lista se i se modifica proprietatile. se foloseste find si products[index]
+
+15. magazinul va avea o metoda de getProducts care concateneaza toate produsele de pe fiecare raft
+
+

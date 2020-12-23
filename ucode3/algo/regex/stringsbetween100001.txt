@@ -1,0 +1,2 @@
+ var re = /(1(0{1,})1)/g;
+    var regArrays = arr.match(re);

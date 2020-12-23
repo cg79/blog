@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <script src="jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <input type="text" id="txt" />
+    <input type="button" id="btn1" value="Capitalize" />
+    <input type="button" id="btn2" value="Comma" />
+    <!-- <input type="button" id="btn2" value="factorial 1" /> -->
+    <label id="lblResult"></label>
+    </br>
+    ^\/\/.* -- comments
+    </br>
+    \/\*((.|\n)*)\*\/ --comments
+    </br>
+    /^[a-z0-9_-]{3,16}$/ -- name /\[img\](.*?)\[\/img\]/
+</body>
+<script>
+$(document).ready(function() {
+
+    $("#btn1").click(
+        function() {
+            var num = $("#txt").val();
+            var factorialResult = Capitalize1(num);
+
+            $("#lblResult").text(factorialResult);
+        }
+    );
+
+    $("#btn2").click(
+        function() {
+            var num = $("#txt").val();
+            var factorialResult = comma(num);
+
+            $("#lblResult").text(factorialResult);
+        }
+    );
+
+
+
+    function Capitalize1(s) {
+        if (!s) {
+            s = "fort collins, a croton-on-hudson,                 harper's ferry, coeur d'alene, o'fallon";
+        }
+        //var re = /(\b[a-z](?!\s))/g;
+
+        s = s.replace(re, function(x,$1) {
+            console.log(x + " " +$1);
+            return x.toUpperCase();
+        });
+        return s;
+
+    }
+
+    function comma(s) {
+        if (!s) {
+            s = "fort collins, ,an croton-on-hudson,             harper's ferry, coeur d'alene, o'fallon";
+        }
+        var re = /(\,|\:|\;)(\s{0,})(\w)/g;
+        //var re = /(\,|\:|\;)(\w)/g;
+
+        s = s.replace(re, function(a, $1, $2, $3) {
+            console.log($1);
+            return $1 + " ! " + $2.toUpperCase();
+        });
+        return s;
+
+    }
+
+
+
+});
+</script>
+
+</html>
