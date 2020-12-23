@@ -1,0 +1,143 @@
+1. WAF which returns a matrix n rows and m columns containing random numbers between 1 and 100
+
+function matrix(n,m) {
+    var mat = [];
+    for(var i=0;i<n;i++) {
+        mat[i] = [];    
+        for(var j=0;j<m;j++) {
+            mat[i][j] = Math.floor(Math.random(1,10)*10) +1
+        }
+    }
+    return mat;
+}
+
+
+
+9.fill an array with random numbers and create a matrix with the numbers from array
+
+10. create the multiplication numbers matrix (10X10)
+
+2. WAF with n and m (rows and columns) as  parameters and returns an array with sum of numbers from every column from the generated matrix (use random numbers)
+
+//asta e pe linie
+function sumMarix(n,m) {
+    debugger;
+    var mat = matrix(n,m);
+    var arr = [];
+    mat.forEach(linie => arr.push( sumrr(linie)))    
+return arr;
+    debugger;
+}
+
+
+function sumMarix(n,m) {
+    debugger;
+    var mat = matrix(n,m);
+//     var arr = [];
+    return mat.map(linie => sumrr(linie))    
+// return arr;
+//     debugger;
+}
+
+1,2,3
+4,5,6
+=====
+5,7,9  --this should be the result
+
+
+//aici am gresit ca la map am pus acc...
+[[1,2],[3,4]].reduce((accArr, elArr) => elArr.map((acc,el,index) => accArr[index] += el ),[0,0])
+
+
+
+
+
+
+3. same as 2 but returns the sum of numbers from every line
+
+4. same as 2 but (n===m - si is a sware matrix) returns the sum of numbers UNDER the main diagonal
+2,3,4,5
+1,2,3,4
+5,6,7,8
+9,1,3,2
+--> resut should be: 2 + 3+4 + 1 +2 + 5 = 15
+
+5. WAF which returns the minimum number from a matrix
+
+function minMat(n) {
+ var mat = matrix(n,n);
+    
+ //mat.reduce()
+debugger;
+return Math.min(... mat.map((el,index) => Math.min(...mat[index])));
+
+debugger;
+}
+
+
+//ca we doit with reduce?
+
+[4,3,5,8,1].reduce((a,b) => a<b?a:b)
+
+
+
+6. WAF which returns an array from a matrix representing all the matrix numbers in a clock direction
+1,2,3
+8,9,4
+7,6,5
+will return [1,2,3,4,5,6,7,8,9]
+
+//divideetimpera 
+
+7. WAF WR the sum of numbers of every min number from every line
+.using the matrix from ex 6, the result is: 1 + 4 + 5 = 10
+
+8. WAF witn n and n as matrix rows and columns and returns an array with the sum of numbers from every diagonal
+. using matrix from 6 ==> [7, 8+ 6 = 14, 1+9+5 = 15, 2+4 = 6, 3]
+
+
+"ada".substring(3).replace().erplce.replace() ...
+
+
+class userchain {
+	money = 0;
+	add3 = () => {
+        debugger;
+		this.money +=3;
+        return this;
+
+	}	
+	add5 = function() {
+		this.money +=5;
+	    return this;
+	}	
+    showMoney = function() {
+        return this.money;
+    }
+}
+new userchain().add3().add5().showMoney()
+
+function userchain1() {
+	this.money = 0;
+	this.add3 = () => {
+        debugger;
+		this.money +=3;
+        return this;
+
+	}	
+	this.add5 = function() {
+		this.money +=5;
+	    return this;
+	}	
+    this.showMoney = function() {
+        return this.money;
+    }
+}
+
+
+
+
+
+
+
+
