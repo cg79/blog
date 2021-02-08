@@ -1,0 +1,65 @@
+
+1. Sa se creeze o clasa Events, care are ca methoda 
+publish(eventName: string, obiect)
+
+- nu trebuie sa faca deocamdata nimic
+
+1. sa se creeze o clasa Helpers 
+ -- are functia guid
+
+
+2. Sa se creeze o clasa User
+ - id = momentan empty --> o sa vina din baza de date
+ - guid = folositi functia guid
+ - age
+ - name
+ - type = poate fii end-user, developer, qa, team-lead, manager, owner
+ 	pt aceste tipuri se poate crea un obiect cu id si nume; 
+ 	user_types = {
+ 		1: enduser,
+ 		2: developer 
+ 	}
+
+- cerinte
+	1. sa se creeze un obiect User pe baza unui json. asta inseamna ca user ar trebuii sa aiba un obiect in constructir de unde se citesc datele
+
+	constructor(data) {
+		const {id, guid, age...} = data;
+		this.id = id;
+		...
+
+	}
+
+3. Sa se creeze o clasa ToDo
+	- id,
+	- guid
+	- userId (o sa fie un user.id)
+	- addedDate
+	- updatedDate
+	- dueDate
+	- name
+	- desc
+	- status (0: not started, 1 in progress, 2 = stopped, 3: completed )
+
+- sa se creeze un obiect ToDo pe baza uni json
+- pt a putea selecta un todo, ar trebuii sa mai existe proprietatea de selected= false
+
+
+1. Sa se creeze o clasa ToDos cu urmatoarele functionalitati
+ - add (todo)
+ - remove (id sau [id's])
+ - update (id, obiect_noile_valori)
+ - find ({...}) obiect cu proprietatile cerute
+
+nota: dupa fiecare actiune de update, sa se apeleze Events.publish('update_todo', todo)
+
+
+
+
+
+
+
+
+
+
+
