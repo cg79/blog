@@ -197,6 +197,7 @@ class person2 {
 }
 
 function parse(s) {
+  debugger;
   var re = /(\{)(.*?)(\})/g;
   s = s.replace(re, function(x, $1, $2, $3) {
     return "el." + $2;

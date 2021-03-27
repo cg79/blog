@@ -13,36 +13,45 @@ banner: "./images/banner.jpg"
 
 class permutation {
 
-	sol = [];
-	n  = 3;
+    sol = [];
+    solutions = [];
 
 
-	check = (pos) => {
-		if(pos === this.sol[pos]) {
-			return true;		
-		}
+    check = (pos) => {
+        if (pos === this.sol[pos]) {
+            return true;
+        }
 
-		return false;
-	}	
+        return false;
+    }
 
-	print = () => {
-		this.sol.forEach(el => console.log(el))
+    print = () => {
+        this.solutions.push([...this.sol]);
+        this.sol.forEach(el => console.log(el))
+    }
+
+    bk = (pos) => {
+        debugger;
+        if (pos === this.n) {
+            return this.print();
+        }
+
+        for (var i = 0; i < this.n; i++) {
+            this.sol[pos] = i;
+            this.check && this.bk(pos + 1);
+        }
+
+    }
+
+    getPermutations(n) {
+		this.n = n;
+		this.solutions = [];
+		this.bk(0);
+
+		return this.solutions;
 	}
 
-	bk = (pos) => {
-		debugger;
-		if(pos === this.n) {
-			return this.print();
-		}
-
-		for(var i=0;i< this.n;i++) {
-			this.sol[pos] = i;
-			this.check && this.bk(pos+1);
-		}
-
-	}
-
-}
+}  
 
 
 
