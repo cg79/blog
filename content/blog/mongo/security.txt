@@ -1,0 +1,79 @@
+134.209.246.72 
+fullsd
+
+root
+rootclau
+
+gatsby
+http://134.209.233.57/ 
+
+google maps:
+AIzaSyAraqzmf3a-4bllKjdnF-qnSBV-F74nc5Q
+
+https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-18-04
+https://www.digitalocean.com/community/tutorials/how-to-set-up-let-s-encrypt-with-nginx-server-blocks-on-ubuntu-16-04
+https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-18-04
+
+db.createUser(
+  {
+    user: "username",
+    pwd: "clauAdminsSecurePassword",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+  }
+)
+
+mongo -u clauadmin -p clauAdminsSecurePassword --authenticationDatabase admin
+
+
+NOTE: use admin
+
+db.createUser(
+  {
+    user: "testUser",
+    pwd: "xyz1234!a",
+    roles: [ { role: "readWrite", db: "patagonia" } ]
+  }
+)
+
+db.createUser(
+  {
+    user: "testuser1",
+    pwd: "xyz123456",
+    roles: [ { role: "readWrite", db: "patagonia" } ]
+  }
+)
+
+db.createUser(
+  {
+    user: "backupUser1",
+    pwd: "xyz123456",
+    roles: [
+       { role: "read", db: "patagonia" },
+       { role: "backup", db: "admin"},
+       { role: "restore", db: "admin"}
+    ]
+  }
+)
+
+mongo -u testUser -p xyz1234!a --authenticationDatabase patagonia ??
+
+mogodb://testUser:xyz1234!a@localhost:27017/patagonia
+
+sudo certbot --apache -d fullsd.com
+
+sudo systemctl start nginx 
+sudo systemctl restart nginx 
+
+pm2 start server.js --name "my-server"
+
+python -m SimpleHTTPServer 9000
+
+
+mongodump  -u "backupUser1" -p "xyz123456" --authenticationDatabase "admin" --db "patagonia" -o /var/backups/mongobackups/b1
+
+mongorestore --verbose /var/backups/mongobackups/b1
+
+
+user_id: 5dd5639d931ace052a004b84
