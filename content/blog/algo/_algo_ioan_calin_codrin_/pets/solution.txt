@@ -1,0 +1,29 @@
+
+CREATE PROCEDURE petSummary()
+BEGIN
+
+set @sql = 
+            (select concat('select ', gc,            ' from 
+             (select name,species,
+                if (species <> @p, @rn:=1 ,@rn:=@rn+1) rn,
+                @p:=species p
+                from pets
+                cross join (select @rn:=0,@p:=null) r
+                order by species
+              ) s group by rn;') from
+            (select 
+                group_concat('max(case when species = ', char(39),species ,char(39),' then name  end ) as ',replace(concat(species,'s'),char(32),'')) gc
+                from
+                (
+               select 'cat' as species
+      union all select 'dog'
+      union all select  'weasel'
+      union all select  'chinchilla'
+                ) s
+                ) t
+             )
+;
+prepare sqlstmt from @sql;
+execute sqlstmt;
+deallocate prepare sqlstmt;
+END

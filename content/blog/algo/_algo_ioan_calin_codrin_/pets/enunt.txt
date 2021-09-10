@@ -1,0 +1,34 @@
+A couple of years ago, you decided to open your own nursery for homeless and neglected pets. Now your nursery is growing very fast, so you decided to make a summary of the pets living there. For now you have pets of only four species - cats, dogs, weasels, and chinchillas (poor things!) - info about them is stored in the table pets.
+
+Your goal is to return a new table with columns cats, dogs, weasels and chinchillas with names of each pet placed in the corresponding column. Names in each column should be ordered alphabetically. Print NULL when there are no more names corresponding to a species.
+
+The pets table contains the following columns:
+
+name - the unique name of the pet;
+species - the species of the pet ("cat", "dog", "weasel" or "chinchilla").
+Return the summary table as described above.
+
+Example
+
+For given table pets
+
+name	species
+Barker	weasel
+Chevy	chinchilla
+Fay	chinchilla
+Grit	cat
+Hex	dog
+Lunar	dog
+Mojo	chinchilla
+Peter	weasel
+Shogun	cat
+Sierra	cat
+the output should be
+
+cats	dogs	weasels	chinchillas
+Grit	Hex	Barker	Chevy
+Shogun	Lunar	Peter	Fay
+Sierra	NULL	NULL	Mojo
+The first column is an alphabetically ordered list of cats, second - of dogs, third - of weasels and fourth - of chinchillas. The empty cell data for columns with less than the maximum number of names per species (in this case, dogs and weasels) are filled with NULL values.
+
+[execution time limit] 10 seconds (mysql)
