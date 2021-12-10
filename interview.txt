@@ -1,0 +1,50 @@
+Interview questions
+
+HTML CSS
+Box Model
+Position: absolute
+Visibility:hidden vs display:none. Why use one over the other?
+CSS preprocessors - LESS/SASS
+
+Advantages:
+
+Nested syntax
+Variables declaration
+Use math and operational functions
+Join multiple files into one
+
+Disadvantages:
+
+Difficult debugging
+Tracking file size is harder
+
+
+FlexBox - did you use it?
+
+
+JAVASCRIPT
+var vs let (block scoped)
+Hoisting term (the above example, var and function)
+Difference between == and === (type coercion)
+Arrow function vs regular function (arrow functions don't have their own 'this')
+Callstack
+What happens with setTimeout? - Event loop and callback queue
+Event bubbling vs event capture
+Prototypal inheritance
+var x = 5 .toString available on primitive
+Higher Order Function
+Closures
+
+REACT
+Virtual DOM
+Lifecycle methods
+State vs props
+
+REDUX
+How does redux work?
+What is the store?
+Why immutable in store?
+
+
+EXERCISES
+https://repl.it/@vnistor
